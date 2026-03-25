@@ -1,0 +1,64 @@
+{
+  "request_id": "smoke_20260319_180919",
+  "timestamp": "20260319_180919",
+  "items": [
+    {
+      "item_index": 1,
+      "ability": "全栈工程开发能力",
+      "types": {
+        "concept": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "define",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            0
+          ],
+          "extra_results": []
+        },
+        "application": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "correct_option",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            0
+          ],
+          "extra_results": []
+        },
+        "code": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "syntax_correct",
+              "result": 1
+            },
+            {
+              "name": "function_correct",
+              "result": 0
+            },
+            {
+              "name": "asr_match",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            1,
+            0,
+            0
+          ],
+          "extra_results": []
+        }
+      }
+    }
+  ]
+}

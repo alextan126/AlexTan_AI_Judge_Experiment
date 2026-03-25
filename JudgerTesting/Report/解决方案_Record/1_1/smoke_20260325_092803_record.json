@@ -1,0 +1,290 @@
+{
+  "request_id": "smoke_20260325_092803",
+  "timestamp": "20260325_092803",
+  "items": [
+    {
+      "item_index": 1,
+      "ability": "企业解决方案设计能力",
+      "types": {
+        "concept": {
+          "passed": true,
+          "decision_points": [
+            {
+              "name": "define",
+              "result": 1
+            }
+          ],
+          "extra_points": [
+            {
+              "name": "keyword",
+              "result": 1
+            },
+            {
+              "name": "keyword_first_sentence",
+              "result": 1
+            },
+            {
+              "name": "keyword_no_repeat",
+              "result": 1
+            },
+            {
+              "name": "not_overtime",
+              "result": 1
+            },
+            {
+              "name": "define_first_sentence",
+              "result": 1
+            },
+            {
+              "name": "order_define_explain",
+              "result": 1
+            }
+          ],
+          "decision_results": [
+            1
+          ],
+          "extra_results": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "application": {
+          "passed": true,
+          "decision_points": [
+            {
+              "name": "correct_option",
+              "result": 1
+            }
+          ],
+          "extra_points": [
+            {
+              "name": "hook_original",
+              "result": 1
+            },
+            {
+              "name": "deduction_correct",
+              "result": 1
+            }
+          ],
+          "decision_results": [
+            1
+          ],
+          "extra_results": [
+            1,
+            1
+          ]
+        },
+        "code": {
+          "passed": true,
+          "decision_points": [
+            {
+              "name": "syntax_correct",
+              "result": 1
+            },
+            {
+              "name": "function_correct",
+              "result": 1
+            },
+            {
+              "name": "asr_match",
+              "result": 1
+            }
+          ],
+          "extra_points": [
+            {
+              "name": "time_optimal",
+              "result": 1
+            },
+            {
+              "name": "space_optimal",
+              "result": 1
+            },
+            {
+              "name": "code_readability",
+              "result": 1
+            },
+            {
+              "name": "comment_readability",
+              "result": 1
+            }
+          ],
+          "decision_results": [
+            1,
+            1,
+            1
+          ],
+          "extra_results": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "item_index": 2,
+      "ability": "企业解决方案设计能力",
+      "types": {
+        "concept": {
+          "passed": true,
+          "decision_points": [
+            {
+              "name": "define",
+              "result": 1
+            }
+          ],
+          "extra_points": [
+            {
+              "name": "keyword",
+              "result": 1
+            },
+            {
+              "name": "keyword_first_sentence",
+              "result": 0
+            },
+            {
+              "name": "keyword_no_repeat",
+              "result": 1
+            },
+            {
+              "name": "not_overtime",
+              "result": 1
+            },
+            {
+              "name": "define_first_sentence",
+              "result": 1
+            },
+            {
+              "name": "order_define_explain",
+              "result": 1
+            }
+          ],
+          "decision_results": [
+            1
+          ],
+          "extra_results": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "application": {
+          "passed": true,
+          "decision_points": [
+            {
+              "name": "correct_option",
+              "result": 1
+            }
+          ],
+          "extra_points": [
+            {
+              "name": "hook_original",
+              "result": 1
+            },
+            {
+              "name": "deduction_correct",
+              "result": 0
+            }
+          ],
+          "decision_results": [
+            1
+          ],
+          "extra_results": [
+            1,
+            0
+          ]
+        },
+        "code": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "syntax_correct",
+              "result": 0
+            },
+            {
+              "name": "function_correct",
+              "result": 1
+            },
+            {
+              "name": "asr_match",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            0,
+            1,
+            0
+          ],
+          "extra_results": []
+        }
+      }
+    },
+    {
+      "item_index": 3,
+      "ability": "企业解决方案设计能力",
+      "types": {
+        "concept": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "define",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            0
+          ],
+          "extra_results": []
+        },
+        "application": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "correct_option",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            0
+          ],
+          "extra_results": []
+        },
+        "code": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "syntax_correct",
+              "result": 1
+            },
+            {
+              "name": "function_correct",
+              "result": 0
+            },
+            {
+              "name": "asr_match",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            1,
+            0,
+            0
+          ],
+          "extra_results": []
+        }
+      }
+    }
+  ]
+}

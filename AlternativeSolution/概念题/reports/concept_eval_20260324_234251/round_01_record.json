@@ -1,0 +1,1296 @@
+{
+  "round_index": 1,
+  "generated_at": "2026-03-24T23:46:27.419011",
+  "items": [
+    {
+      "item_index": 1,
+      "sample_file": "FullStack_Sample1.md",
+      "case_id": "C-01",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答明确说明了 RESTful API 是一种怎样的设计风格，并给出了其核心特征和作用，本质上是在定义概念。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答内容完整包含关键词“基于资源、使用统一接口并通过 HTTP 方法对资源进行操作的 Web 接口设计风格”，与提取的关键定义完全一致，符合关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "用户答案的第一句完整且准确地包含了关键词定义：“RESTful API 是一种基于资源、使用统一接口并通过 HTTP 方法对资源进行操作的 Web 接口设计风格”，与抽取的关键定义一致，满足关键词在第一句出现的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 0,
+              "reason": "回答中完整关键词句只出现一次，但后半句仍然重复解释关键词定义中的关键信息，没有做到在给出关键词后用更简洁的方式展开，因此视为对关键词含义的冗余重复。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答与标准答案长度几乎相同，内容精炼，没有超出 1.5 倍长度范围。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句完整给出了“基于资源、使用统一接口并通过 HTTP 方法对资源进行操作的 Web 接口设计风格”的定义，与抽取的关键定义完全一致，符合定义在第一句的要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "首句先给出完整定义，随后句子再做补充说明和举例，整体顺序符合“先定义、后解释”的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "基于资源、使用统一接口并通过 HTTP 方法对资源进行操作的 Web 接口设计风格"
+        }
+      }
+    },
+    {
+      "item_index": 2,
+      "sample_file": "FullStack_Sample1.md",
+      "case_id": "C-02",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答明确说明了 RESTful API 是一种以资源为核心的 Web 接口设计方式，满足概念定义要求。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心表述“以资源为核心、通过统一接口规范来组织网络请求的 Web 接口设计方式”，与提取的关键定义完全一致，满足关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "用户回答的第一句完整且准确地出现了提取的关键词描述“以资源为核心、通过统一接口规范来组织网络请求的 Web 接口设计方式”，符合关键词在第一句的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 0,
+              "reason": "答案中关键词“RESTful API”被重复出现两次，且在同一段中无必要重复，未满足不重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容简洁，与标准答案长度基本一致，远未超过标准答案的1.5倍，符合不超时要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "用户作答的第一句完整、准确地给出了提取的关键定义“以资源为核心、通过统一接口规范来组织网络请求的 Web 接口设计方式”，完全符合该得分点要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "首句先给出完整定义，后续句子再展开解释资源抽象、URL 表示和 HTTP 方法操作，顺序符合先定义再解释。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "以资源为核心、通过统一接口规范来组织网络请求的 Web 接口设计方式"
+        }
+      }
+    },
+    {
+      "item_index": 3,
+      "sample_file": "FullStack_Sample1.md",
+      "case_id": "C-03",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "答案明确说明了 RESTful API 的本质是什么，并给出了概念性的描述，而不仅是用途或示例。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了关键词“基于资源、通过统一接口并结合 HTTP 方法对资源进行操作的 Web 接口设计风格”，与提取的关键定义一致，满足关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句中已经出现并完整表述了关键词所对应的核心定义“基于资源、通过统一接口并结合 HTTP 方法对资源进行操作的 Web 接口设计风格”，符合要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "关键词只在答案中完整出现了一次定义性表述，没有出现多次无意义重复，符合不重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎等长且表述精炼，没有出现冗长赘述，明显在标准答案1.5倍长度之内。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "用户的第一句已经是在回答“什么是 RESTful API”的定义性说明，并在紧接着的同一句后半部分准确给出核心定义，符合‘定义在第一句’的要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "第一句先讲在业务管理系统中的用途与作用，第二句才给出概念性定义，顺序是“场景用途→定义”，不符合先下定义再解释的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "一种基于资源、通过统一接口并结合 HTTP 方法对资源进行操作的 Web 接口设计风格"
+        }
+      }
+    },
+    {
+      "item_index": 4,
+      "sample_file": "FullStack_Sample1.md",
+      "case_id": "C-04",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 0,
+              "reason": "回答只通过举例说明了不同 HTTP 方法在后台管理系统中的使用场景和优点，但没有正面说明“RESTful API 是什么”，缺少对概念本身的定义。"
+            }
+          ],
+          "passed": false,
+          "extra_points": [],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": ""
+        }
+      }
+    },
+    {
+      "item_index": 5,
+      "sample_file": "FullStack_Sample1.md",
+      "case_id": "C-05",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "答案最后一句明确给出了正式定义：说明它是什么样的接口设计方式及其核心特征。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "答案中完整出现了提取的关键定义“以资源为核心、借助统一接口约束，并通过 HTTP 请求动作完成增删改查的 Web 接口设计方式”，已包含核心关键词。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 0,
+              "reason": "第一句没有出现提取的核心定义中对应的关键词或等价精炼表述（例如“以资源为核心、借助统一接口约束，并通过 HTTP 请求动作完成增删改查的 Web 接口设计方式”），该表述出现在最后一句，未满足“在第一句”这一要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "回答只在最后一句出现了一次完整的关键词定义短语，没有在其他位置重复该关键词，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 0,
+              "reason": "回答明显比标准答案的精炼定义冗长许多，加入了大量场景铺垫和扩展说明，超过以关键定义为主的标准答案长度 1.5 倍，未满足“不过度超时/超长”的要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 0,
+              "reason": "第一句是场景和特点的描述，真正的定义“说得更正式一点，它是一种以资源为核心、借助统一接口约束，并通过 HTTP 请求动作完成增删改查的 Web 接口设计方式。”出现在最后一句，因此未在第一句给出明确定义。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "先是长篇背景和场景描述，最后一句才给出“以资源为核心、借助统一接口约束，并通过 HTTP 请求动作完成增删改查的 Web 接口设计方式”的正式定义，顺序是解释→定义，而不是先定义再解释。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "以资源为核心、借助统一接口约束，并通过 HTTP 请求动作完成增删改查的 Web 接口设计方式"
+        }
+      }
+    },
+    {
+      "item_index": 6,
+      "sample_file": "FullStack_Sample2.md",
+      "case_id": "C-01",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答开头明确说明了前后端联调的含义，并用一句话给出了概念性定义。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心概念表述“前端与后端开发人员基于约定的接口协议，将各自独立开发的模块进行集成对接并验证数据交互正确性的协作过程”，与提取的关键定义高度一致，符合关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "关键词对应的核心表述“前后端联调是前端与后端开发人员基于约定的接口协议，将各自独立开发的模块进行集成对接并验证数据交互正确性的协作过程”完整且准确地出现在第一句。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 0,
+              "reason": "回答中完整关键词句在两个句子中高度重复使用，未体现对关键词的适度避免重复，属于不满足“未重复关键词”的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎等长且未明显超出1.5倍范围，表述简洁集中，没有冗长扩展，符合“不过长、不拖沓”的要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "用户回答的第一句完整给出了提取的关键定义：‘前端与后端开发人员基于约定接口协议对独立开发模块进行集成对接并验证数据交互的协作过程’，与标准定义高度一致，且定义确实出现在第一句。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "第一句完整给出概念的定义，后一句在此基础上展开应用场景和具体内容的说明，顺序为先定义后解释，符合要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "前端与后端开发人员基于约定接口协议对独立开发模块进行集成对接并验证数据交互的协作过程"
+        }
+      }
+    },
+    {
+      "item_index": 7,
+      "sample_file": "FullStack_Sample2.md",
+      "case_id": "C-02",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答直接说明了前后端联调是什么，以及其过程和目的，属于明确给出概念定义。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了关键词“前后端联调”，且表述与给定关键定义一致。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句中完整出现了关键词定义“前端和后端在各自完成开发后，将两端的功能模块连通起来共同验证的过程”，与提取的关键定义一致，满足关键词在第一句出现的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "答案中关键词“前后端联调”只在开头出现了一次，后文未再重复该关键词，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎等长且表述简洁，没有出现明显的冗长或超时情况，符合不超出标准答案1.5倍长度的要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句完整给出了“前端和后端在各自完成开发后将两端功能模块连通并共同验证的过程”的定义，和抽取的关键定义完全一致，符合‘定义在第一句’要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "首句给出完整定义，后续句子再展开说明流程和目的，顺序为先定义后解释，符合要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "前端和后端在各自完成开发后将两端功能模块连通并共同验证的过程"
+        }
+      }
+    },
+    {
+      "item_index": 8,
+      "sample_file": "FullStack_Sample2.md",
+      "case_id": "C-03",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答明确说明了前后端联调是什么，并给出了核心定义性表述：一个按照约定 API 规范进行对接、验证端到端功能的协作过程。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心表述“前后端联调，即双方按照约定的 API 规范将各自模块对接起来，验证端到端功能正确性的协作过程”，与提取的关键定义高度一致，关键词存在。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句中直接出现了关键词“前后端联调”，且与提取的关键定义完全对应，满足在第一句出现关键词的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "答案中对核心概念的表述只出现了一次完整定义，没有进行多余、机械的重复，符合“未重复关键词”的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎完全一致，长度适中且无额外赘述，明显在标准答案 1.5 倍篇幅以内。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 0,
+              "reason": "第一句只是提出需要一个集成验证环节，真正给出“前后端联调”定义的是第二句，未在首句完成定义。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "回答先指出“这个环节就是前后端联调，即……”给出明确定义，紧接着用同一句进一步解释验证端到端功能正确性，整体顺序符合先定义再解释的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "按照约定的 API 规范将前后端模块对接并验证端到端功能正确性的协作过程"
+        }
+      }
+    },
+    {
+      "item_index": 9,
+      "sample_file": "FullStack_Sample2.md",
+      "case_id": "C-04",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 0,
+              "reason": "回答只举了实际操作场景，并未概括性说明“前后端联调是什么”，缺少明确的定义性表述。"
+            }
+          ],
+          "passed": false,
+          "extra_points": [],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": ""
+        }
+      }
+    },
+    {
+      "item_index": 10,
+      "sample_file": "FullStack_Sample2.md",
+      "case_id": "C-05",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答最后一段用“总结来说，它就是……”明确给出了概念的定义，并说明是一个验收步骤。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答最后一句完整出现了提炼出的关键表述“把页面端和服务器端各自完成的模块拼到一起，确认彼此的通信和功能能够正常衔接的一个验收步骤”，与核心定义高度一致，关键词明确存在。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 0,
+              "reason": "第一句是“这个问题其实挺常见的，在实际工作中大家都会碰到。”，并未出现核心表述“把页面端和服务器端各自完成的模块拼到一起，确认彼此的通信和功能能够正常衔接的验收步骤”，因此关键词不在第一句。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "核心定义性表述“把页面端和服务器端各自完成的模块拼到一起，确认彼此的通信和功能能够正常衔接的一个验收步骤”只在结尾完整出现一次，没有对该关键词式表述进行多次重复，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 0,
+              "reason": "作答明显比核心定义所需内容冗长许多，超过了标准答案长度的1.5倍，未能保持简洁，因此不过点。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 0,
+              "reason": "第一句是在引入场景，并未给出“把页面端和服务器端各自完成的模块拼到一起，确认彼此通信和功能正常衔接的验收步骤”这一明确定义，真正的定义出现在最后一句。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "回答先进行了背景和原因的铺垫，最后一句才给出定义，不符合先下定义再解释的顺序要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "把页面端和服务器端各自完成的模块拼到一起，确认彼此的通信和功能能够正常衔接的验收步骤"
+        }
+      }
+    },
+    {
+      "item_index": 11,
+      "sample_file": "FullStack_Sample3.md",
+      "case_id": "C-01",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答开头清晰说明了组件化开发的含义，并解释其特征和方式。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了关键词定义“将用户界面拆分为独立、可复用的封装单元的开发模式”，满足关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句完整出现了关键词“将用户界面拆分为独立、可复用的封装单元的开发模式”的同义表述，满足要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 0,
+              "reason": "答案只由两句话组成，但第二句没有继续解释或举例组件化开发的其他方面，而是重复强调了封装单元和通信方式，整体上属于对核心概念的冗余扩展，未做到在给出定义后避免不必要的关键词重复。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案长度基本一致且简洁，没有出现明显赘述，符合不超时（不超1.5倍）的要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句完整给出了“将用户界面拆分为独立、可复用的封装单元的开发模式”的定义，且与提取的关键定义高度一致，因此定义在第一句，判定通过。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "首句先给出组件化开发的完整定义，紧接着第二句再通过 Vue 的具体机制进行说明与举例，顺序为先定义后解释，符合要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "将用户界面拆分为独立、可复用的封装单元的开发模式"
+        }
+      }
+    },
+    {
+      "item_index": 12,
+      "sample_file": "FullStack_Sample3.md",
+      "case_id": "C-02",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "答案用“是一种……”明确定义了概念，并解释了其本质特征。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了提取的关键词定义“将页面按功能模块拆分、各模块独立管理状态与视图的可复用封装开发模式”的同义表述，符合关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句完整出现了“将页面按功能模块拆分、各模块独立管理状态与视图的可复用封装开发模式”的核心含义，且是对组件化开发的直接定义，符合要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "用户回答中对关键词“将页面按功能模块拆分、各模块独立管理状态与视图的可复用封装开发模式”只在首句集中表述了一次，后文是对该概念的展开说明，没有机械重复完整关键词，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎等同，字数精炼，没有超出标准答案 1.5 倍，符合答题长度要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "用户作答的第一句完整覆盖了抽取的关键定义“将页面按功能模块拆分、各模块独立管理状态与视图的可复用封装开发模式”，定义信息即在首句给出，因此判定为符合。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "首句先给出了完整定义，后续句子再对可复用性、组合方式和维护成本进行说明，顺序为先定义后解释，符合要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "将页面按功能模块拆分、各模块独立管理状态与视图的可复用封装开发模式"
+        }
+      }
+    },
+    {
+      "item_index": 13,
+      "sample_file": "FullStack_Sample3.md",
+      "case_id": "C-03",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答中用“即…”明确定义了什么是组件化开发，并描述了其本质特征。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心表述“把 UI 拆分为自包含模板、逻辑与样式的独立模块，再通过 props 和 emit 组合成完整应用的开发模式”，与提取的关键定义完全一致，满足关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "用户答案的第一句中已完整出现提炼出的关键词定义内容，且紧接着即进行同义表述，符合“关键词是否在第一句”的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "关键词对应的核心定义在答案中只出现了一次完整表述，没有不必要的重复使用，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎等长且非常精炼，没有出现冗长扩展，明显在标准答案 1.5 倍长度以内。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句中已完整给出组件化开发的定义，且包含抽取的关键定义“把 UI 拆分为自包含模板、逻辑与样式的独立模块，再通过 props 和 emit 组合成完整应用的开发模式”，符合要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "首句中先给出的是效果和目的（可维护性与效率），随后才给出正式定义，没有形成先定义再解释的顺序，而是解释+定义的结构，不符合“先定义后解释”的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "把 UI 拆分为自包含模板、逻辑与样式的独立模块，再通过 props 和 emit 组合成完整应用的开发模式"
+        }
+      }
+    },
+    {
+      "item_index": 14,
+      "sample_file": "FullStack_Sample3.md",
+      "case_id": "C-04",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 0,
+              "reason": "答案只是通过示例描述了使用组件的场景和好处，没有用一句话明确说明“组件化开发是什么”"
+            }
+          ],
+          "passed": false,
+          "extra_points": [],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": ""
+        }
+      }
+    },
+    {
+      "item_index": 15,
+      "sample_file": "FullStack_Sample3.md",
+      "case_id": "C-05",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答最后用“所以总结来说”明确给出了组件化开发的概念性表述，说明了它是什么。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答末尾完整出现了提取的关键定义原文：“把一个大的页面按照功能职责切成多个小的独立块，每个块自己管理自身的显示和行为，再把这些小块拼装起来形成完整页面的一种做法”，满足关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 0,
+              "reason": "第一句没有出现核心定义“把一个大的页面按照功能职责切成多个小的独立块……”或等价的精炼表述，真正的定义出现在最后一句，因此不满足关键词在第一句的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "核心定义句只在最后一处完整出现了一次，前文是铺垫和引出，没有对该关键词定义进行不必要的重复，符合“未重复关键词”的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 0,
+              "reason": "作答明显多于直接给出定义所需的字数，包含较长的背景铺垫和举例，超出标准答案长度的1.5倍，判定为啰嗦超时。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 0,
+              "reason": "第一句是背景铺垫，并未给出提炼后的定义；真正与提取的关键定义完全对应的那句话出现在最后一句，而不是第一句，因此本点不满足。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "前面大段是在铺垫背景和解释问题来源，真正贴合提炼出的关键定义句是最后一句“所以总结来说，它就是把一个大的页面按照功能职责切成多个小的独立块……”。顺序是先解释/铺垫再给定义，不符合先定义再解释的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "把一个大的页面按照功能职责切成多个小的独立块，每个块自己管理自身的显示和行为，再把这些小块拼装起来形成完整页面的一种做法"
+        }
+      }
+    },
+    {
+      "item_index": 16,
+      "sample_file": "FullStack_Sample4.md",
+      "case_id": "C-01",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答中明确说明了数据库索引的本质和用途，例如是一种基于特定列构建的有序数据结构用于加速检索。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整包含了关键词定义“基于特定列构建的有序数据结构，用于加速查询时的数据检索并减少全表扫描”，与提取的关键定义完全一致，故通过。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句完整出现了关键词“基于特定列构建的有序数据结构，用于加速查询时的数据检索并减少全表扫描”，与抽取的关键定义完全一致，符合要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "关键词只在首句出现一次，后文未再次重复完整关键词表述，符合未重复要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎一致且长度相当，未超过标准答案的1.5倍，属于简洁作答。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句完整给出了与提取的关键定义高度一致的定义，且紧接着的内容是进一步补充解释，符合“定义在第一句”的要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "首句先给出完整定义，后续再进行实现方式和原理解释，顺序为先定义再解释，符合要求"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "基于特定列构建的有序数据结构，用于加速查询时的数据检索并减少全表扫描"
+        }
+      }
+    },
+    {
+      "item_index": 17,
+      "sample_file": "FullStack_Sample4.md",
+      "case_id": "C-02",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答明确说明了数据库索引是什么，并描述其作为辅助结构提升查询效率的作用。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心概念表述“数据库管理系统为表中的列额外维护的一种辅助结构，用于提升查询效率”，与提取的关键定义完全一致，符合关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句中完整出现了关键词定义“数据库管理系统为表中的列额外维护的一种辅助结构，用于提升查询效率”。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "答案中仅在第一句完整出现了一次关键词定义，后文未再次重复关键词本身，属于未重复关键词的情况。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案长度基本一致，未出现明显赘述或超长说明，可以视为在标准答案1.5倍时间/长度以内。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句完整给出了“数据库索引”的定义，且与提取的关键定义完全一致，因此定义在第一句中。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "第一句除了给出定义，还立即开始解释核心原理，并非先完整给出定义再在后面句子中展开解释，定义和解释混在同一句中，顺序不满足“先定义后解释”的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "数据库管理系统为表中的列额外维护的一种辅助结构，用于提升查询效率"
+        }
+      }
+    },
+    {
+      "item_index": 18,
+      "sample_file": "FullStack_Sample4.md",
+      "case_id": "C-03",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "答案明确说明数据库索引是什么，并给出了本质特征：基于特定列构建的有序结构，用于加速查询。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心表述“它是基于特定列构建的有序结构，能够让查询引擎快速定位目标行而无需遍历整张表”，与给定的关键定义高度一致，关键词存在。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "关键词“基于特定列构建的有序结构，用于让查询引擎快速定位目标行”完整地出现在用户答案的第一句中，满足要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "答案只在定义处出现了一次完整的关键词表述“基于特定列构建的有序结构，能够让查询引擎快速定位目标行”，没有不必要的重复，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案几乎等长且非常精炼，没有出现冗长赘述或超时情况，明显在1.5倍长度以内。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句中已完整给出“基于特定列构建的有序结构，用于让查询引擎快速定位目标行”的定义，符合要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "首句中除了给出索引的定义外，还包含较多背景铺垫和问题描述，未体现出先明确定义再单独展开解释的清晰顺序，定义与解释混杂在同一句中，因此不满足“定义在前、解释在后”的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "基于特定列构建的有序结构，用于让查询引擎快速定位目标行"
+        }
+      }
+    },
+    {
+      "item_index": 19,
+      "sample_file": "FullStack_Sample4.md",
+      "case_id": "C-04",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 0,
+              "reason": "回答只通过例子说明了加索引可以提升查询速度，但没有直接说明“数据库索引是什么”或给出概念性定义。"
+            }
+          ],
+          "passed": false,
+          "extra_points": [],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": ""
+        }
+      }
+    },
+    {
+      "item_index": 20,
+      "sample_file": "FullStack_Sample4.md",
+      "case_id": "C-05",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答中清晰说明了数据库索引是什么，并给出了本质性的概念描述。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答结尾处给出了总结性表述：“本质上就是数据库在表的某些列上额外维护的一个排好序的辅助结构”，与提取的关键定义完全一致，关键词明确出现且表意准确，因此通过。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 0,
+              "reason": "第一句没有出现“在表的某些列上额外维护的一个排好序的辅助结构”或其等价精简表述，该表述只在最后总结句中出现，因此不满足关键词在第一句的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "核心定义句仅在最后一处出现一次，没有对“在表的某些列上额外维护的一个排好序的辅助结构”或等价表达进行不必要的重复，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 0,
+              "reason": "用户答案明显比标准答案长很多，包含大量铺垫性描述，超过标准答案 1.5 倍，冗长不够精炼，因此不满足不超时要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 0,
+              "reason": "第一句在铺垫数据库存储背景，并未直接给出“在表的某些列上额外维护的一个排好序的辅助结构”这样的定义性表述，真正的定义出现在最后一句，因此不满足定义在第一句的要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "回答先通过类比与背景引出索引概念，第一句虽是铺垫但紧接着用“在你经常查询的那些列上面额外建一个东西，这个东西会把那些列的值按照一定的方式排列好”进行定义，随后再解释优缺点和作用，整体顺序符合先定义后展开解释的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "在表的某些列上额外维护的一个排好序的辅助结构"
+        }
+      }
+    },
+    {
+      "item_index": 21,
+      "sample_file": "FullStack_Sample5.md",
+      "case_id": "C-01",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答明确阐述了缓存是什么，并给出了其作用和实现形式，属于对概念的清晰定义。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心定义句“将频繁访问的数据暂存在高速存储介质中，以减少对慢速数据源重复访问的技术机制”，与抽取的关键定义完全一致，满足关键词存在要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句完整包含了关键词对应的核心表述“将频繁访问的数据暂存在高速存储介质中，以减少对慢速数据源重复访问的技术机制”，且紧跟在名词“缓存”之后，符合要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "关键词只在首句中自然出现了一次，后文未做不必要重复，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "作答内容与标准答案长度基本一致，未出现明显赘述或超时，符合在标准答案1.5倍时间/长度内的要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "用户作答的第一句完整且准确地给出了提取的关键定义：“将频繁访问的数据暂存在高速存储介质中，以减少对慢速数据源重复访问的技术机制”，完全符合要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "回答首句先给出完整定义，随后第二句才展开解释高并发场景下的作用和实现，顺序为先定义后解释，符合要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "将频繁访问的数据暂存在高速存储介质中，以减少对慢速数据源重复访问的技术机制"
+        }
+      }
+    },
+    {
+      "item_index": 22,
+      "sample_file": "FullStack_Sample5.md",
+      "case_id": "C-02",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答在开头明确说明了缓存是什么，并给出了性质和作用的概括性表述。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答首句完整包含了提取的关键定义“通过在高速存储介质中暂存热点数据来加速数据读取的技术”，关键词明确存在。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句完整包含了提取的关键词表述“通过在高速存储介质中暂存热点数据来加速数据读取的技术”。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "关键词精确定义只出现了一次，后文未进行不必要的重复，符合未重复关键词要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "学生作答长度与标准答案基本一致，仅在定义基础上做少量补充解释，明显在1.5倍长度以内，符合简洁要求。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句完整给出了“通过在高速存储介质中暂存热点数据来加速数据读取的技术”的定义，且与抽取的关键定义高度一致，符合要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "首句先给出完整定义，后续句子再进行作用与策略的扩展说明，顺序为先定义再解释，符合要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "通过在高速存储介质中暂存热点数据来加速数据读取的技术"
+        }
+      }
+    },
+    {
+      "item_index": 23,
+      "sample_file": "FullStack_Sample5.md",
+      "case_id": "C-03",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答中有一句对缓存本质的概括性说明，明确指出缓存是什么。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中完整出现了核心定义中提到的关键词表述“将高频访问数据暂存于高速存储层以降低后端访问延迟的技术”，符合关键词存在的要求。"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句中已经完整出现并表述了提取的关键词定义“将高频访问数据暂存于高速存储层以降低后端访问延迟的技术”，因此符合关键词在第一句的要求。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 0,
+              "reason": "答案中关键定义句完整重复了两遍（在“First sentence”中已出现一次，又在后一句再次出现），属于不必要的关键词重复。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 1,
+              "reason": "回答内容简洁，只用两句话完成定义和简单举例，长度明显在标准答案的1.5倍以内，未出现冗长展开。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 1,
+              "reason": "第一句后半部分已经完整给出了“将高频访问数据暂存于高速存储层以降低后端访问延迟的技术”的定义，符合要求。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 0,
+              "reason": "回答先举应用场景再给出正式定义，顺序是解释/举例在前、定义在后，不符合先定义再解释的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "将高频访问数据暂存于高速存储层以降低后端访问延迟的技术"
+        }
+      }
+    },
+    {
+      "item_index": 24,
+      "sample_file": "FullStack_Sample5.md",
+      "case_id": "C-04",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 0,
+              "reason": "回答只给出了缓存工具和使用案例，没有直接说明“缓存是什么”或进行概念性定义。"
+            }
+          ],
+          "passed": false,
+          "extra_points": [],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": ""
+        }
+      }
+    },
+    {
+      "item_index": 25,
+      "sample_file": "FullStack_Sample5.md",
+      "case_id": "C-05",
+      "types": {
+        "concept": {
+          "decision_points": [
+            {
+              "name": "define",
+              "desc": "是否有定义",
+              "result": 1,
+              "reason": "回答中明确说明了缓存的本质和作用，给出了清晰的概念性表述。"
+            }
+          ],
+          "passed": true,
+          "extra_points": [
+            {
+              "name": "keyword",
+              "desc": "关键词是否存在",
+              "result": 1,
+              "reason": "作答中明确出现了“用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问”，与提取的关键定义完全一致，关键词存在"
+            },
+            {
+              "name": "keyword_first_sentence",
+              "desc": "关键词是否在第一句",
+              "result": 1,
+              "reason": "第一句中已出现完整的核心定义表述“用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问”。"
+            },
+            {
+              "name": "keyword_no_repeat",
+              "desc": "是否未重复关键词",
+              "result": 1,
+              "reason": "核心定义性表述“用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问”在答案中只出现了一次，没有不必要的重复，符合未重复关键词的要求。"
+            },
+            {
+              "name": "not_overtime",
+              "desc": "答题时间是否在标准答案1.5倍内",
+              "result": 0,
+              "reason": "回答有较多与定义无关的寒暄和铺垫，相比标准答案明显啰嗦冗长，超过1.5倍长度，未做到足够简洁。"
+            },
+            {
+              "name": "define_first_sentence",
+              "desc": "定义是否在第一句",
+              "result": 0,
+              "reason": "第一句是寒暄和铺垫，真正的定义出现在第三句“所以呢，它本质上就是一种用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问”，因此未在第一句给出定义。"
+            },
+            {
+              "name": "order_define_explain",
+              "desc": "顺序是否是定义+解释",
+              "result": 1,
+              "reason": "在回答中先给出缓存的本质定义“用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问”，随后再展开举例和解释（CPU缓存、操作系统页面置换、应用层方案），整体顺序符合先定义再解释的要求。"
+            }
+          ],
+          "model_cot": "",
+          "observation": null,
+          "extracted_definition": "用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "request_id": "smoke_20260319_172853",
+  "timestamp": "20260319_172853",
+  "items": [
+    {
+      "item_index": 1,
+      "ability": "全栈工程开发能力",
+      "types": {
+        "concept": {
+          "passed": true,
+          "decision_points": [
+            {
+              "name": "define",
+              "result": 1
+            }
+          ],
+          "extra_points": [
+            {
+              "name": "keyword",
+              "result": 1
+            },
+            {
+              "name": "keyword_first_sentence",
+              "result": 0
+            },
+            {
+              "name": "keyword_no_repeat",
+              "result": 1
+            },
+            {
+              "name": "not_overtime",
+              "result": 1
+            },
+            {
+              "name": "define_first_sentence",
+              "result": 1
+            },
+            {
+              "name": "order_define_explain",
+              "result": 1
+            }
+          ],
+          "decision_results": [
+            1
+          ],
+          "extra_results": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "application": {
+          "passed": true,
+          "decision_points": [
+            {
+              "name": "correct_option",
+              "result": 1
+            }
+          ],
+          "extra_points": [
+            {
+              "name": "hook_original",
+              "result": 1
+            },
+            {
+              "name": "deduction_correct",
+              "result": 0
+            }
+          ],
+          "decision_results": [
+            1
+          ],
+          "extra_results": [
+            1,
+            0
+          ]
+        },
+        "code": {
+          "passed": false,
+          "decision_points": [
+            {
+              "name": "syntax_correct",
+              "result": 1
+            },
+            {
+              "name": "function_correct",
+              "result": 1
+            },
+            {
+              "name": "asr_match",
+              "result": 0
+            }
+          ],
+          "extra_points": [],
+          "decision_results": [
+            1,
+            1,
+            0
+          ],
+          "extra_results": []
+        }
+      }
+    }
+  ]
+}
