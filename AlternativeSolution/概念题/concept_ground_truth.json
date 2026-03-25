@@ -25,20 +25,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "第一句直接给出完整定义，并包含关键词一次；后面再做展开解释，避免重复关键词。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "第一句直接给出完整定义，并包含关键词一次；后面再做展开解释，避免重复关键词。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "第一句直接给出完整定义，并包含关键词一次；后面再做展开解释，避免重复关键词。"
           },
@@ -64,7 +64,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -88,20 +88,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "第一句先定义但不放关键词；第二句开始补关键词，并刻意重复两次。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "第一句先定义但不放关键词；第二句开始补关键词，并刻意重复两次。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "第一句先定义但不放关键词；第二句开始补关键词，并刻意重复两次。"
           },
@@ -127,7 +127,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -151,20 +151,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "先解释用途，再给定义；关键词放在第一句且只出现一次，故意不满足“先定义后解释”。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "先解释用途，再给定义；关键词放在第一句且只出现一次，故意不满足“先定义后解释”。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "先解释用途，再给定义；关键词放在第一句且只出现一次，故意不满足“先定义后解释”。"
           },
@@ -190,7 +190,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -240,20 +240,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 0,
             "reason": "前面故意先铺垫和解释，最后才下定义；不用题面关键词，整体故意写长一些，让加分项尽量全部失分。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "前面故意先铺垫和解释，最后才下定义；不用题面关键词，整体故意写长一些，让加分项尽量全部失分。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "前面故意先铺垫和解释，最后才下定义；不用题面关键词，整体故意写长一些，让加分项尽量全部失分。"
           },
@@ -279,7 +279,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -303,20 +303,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "标准回答。关键词\"接口协议\"\"集成对接\"\"数据交互\"均出现在第一句且不重复，结构为定义→解释。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "标准回答。关键词\"接口协议\"\"集成对接\"\"数据交互\"均出现在第一句且不重复，结构为定义→解释。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "标准回答。关键词\"接口协议\"\"集成对接\"\"数据交互\"均出现在第一句且不重复，结构为定义→解释。"
           },
@@ -342,7 +342,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -366,20 +366,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "定义在第一句但不含关键词（\"接口协议\"\"数据交互\"）；关键词从第二句开始出现，其中\"接口协议\"出现两次、\"数据交互\"出现两次，构成重复。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "定义在第一句但不含关键词（\"接口协议\"\"数据交互\"）；关键词从第二句开始出现，其中\"接口协议\"出现两次、\"数据交互\"出现两次，构成重复。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "定义在第一句但不含关键词（\"接口协议\"\"数据交互\"）；关键词从第二句开始出现，其中\"接口协议\"出现两次、\"数据交互\"出现两次，构成重复。"
           },
@@ -405,7 +405,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -429,20 +429,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"接口协议\"\"数据交互\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"接口协议\"\"数据交互\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"接口协议\"\"数据交互\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
@@ -468,7 +468,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -518,20 +518,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 0,
             "reason": "用\"页面展示的部分和服务器处理的部分\"\"两边合到一起\"\"通信和功能衔接\"等模糊说法替代关键词（\"接口协议\"\"数据交互\"\"集成对接\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "用\"页面展示的部分和服务器处理的部分\"\"两边合到一起\"\"通信和功能衔接\"等模糊说法替代关键词（\"接口协议\"\"数据交互\"\"集成对接\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "用\"页面展示的部分和服务器处理的部分\"\"两边合到一起\"\"通信和功能衔接\"等模糊说法替代关键词（\"接口协议\"\"数据交互\"\"集成对接\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
@@ -557,7 +557,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -581,20 +581,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "标准回答。关键词\"可复用\"\"封装单元\"\"接口\"均出现在第一句且不重复，结构为定义→解释。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "标准回答。关键词\"可复用\"\"封装单元\"\"接口\"均出现在第一句且不重复，结构为定义→解释。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "标准回答。关键词\"可复用\"\"封装单元\"\"接口\"均出现在第一句且不重复，结构为定义→解释。"
           },
@@ -620,7 +620,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -644,20 +644,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "定义在第一句但不含关键词（\"封装单元\"\"可复用\"\"接口\"）；关键词从第二句开始出现，\"封装单元\"出现两次、\"可复用\"出现两次，构成重复。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "定义在第一句但不含关键词（\"封装单元\"\"可复用\"\"接口\"）；关键词从第二句开始出现，\"封装单元\"出现两次、\"可复用\"出现两次，构成重复。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "定义在第一句但不含关键词（\"封装单元\"\"可复用\"\"接口\"）；关键词从第二句开始出现，\"封装单元\"出现两次、\"可复用\"出现两次，构成重复。"
           },
@@ -683,7 +683,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -707,20 +707,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"可复用\"\"封装单元\"\"接口\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"可复用\"\"封装单元\"\"接口\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"可复用\"\"封装单元\"\"接口\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
@@ -746,7 +746,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -796,20 +796,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 0,
             "reason": "用\"切成一块一块的\"\"独立块\"\"拼装起来\"等模糊说法替代关键词（\"可复用\"\"封装单元\"\"接口\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "用\"切成一块一块的\"\"独立块\"\"拼装起来\"等模糊说法替代关键词（\"可复用\"\"封装单元\"\"接口\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "用\"切成一块一块的\"\"独立块\"\"拼装起来\"等模糊说法替代关键词（\"可复用\"\"封装单元\"\"接口\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
@@ -835,7 +835,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -859,20 +859,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "标准回答。关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"均出现在第一句且不重复，结构为定义→解释。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "标准回答。关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"均出现在第一句且不重复，结构为定义→解释。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "标准回答。关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"均出现在第一句且不重复，结构为定义→解释。"
           },
@@ -898,7 +898,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -922,20 +922,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "定义在第一句但不含关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"）；关键词从第二句开始出现，\"有序数据结构\"出现两次、\"全表扫描\"出现两次，构成重复。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "定义在第一句但不含关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"）；关键词从第二句开始出现，\"有序数据结构\"出现两次、\"全表扫描\"出现两次，构成重复。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "定义在第一句但不含关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"）；关键词从第二句开始出现，\"有序数据结构\"出现两次、\"全表扫描\"出现两次，构成重复。"
           },
@@ -961,7 +961,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -985,20 +985,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
             "reason": "第一句是解释/背景（含关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"），第二句才给出定义，顺序为解释→定义。关键词不重复。"
           },
@@ -1024,7 +1024,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -1074,20 +1074,20 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 0,
             "reason": "用\"额外建一个东西\"\"排列好\"\"跳到你想要的位置\"等模糊说法替代关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
             "reason": "用\"额外建一个东西\"\"排列好\"\"跳到你想要的位置\"等模糊说法替代关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
             "reason": "用\"额外建一个东西\"\"排列好\"\"跳到你想要的位置\"等模糊说法替代关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。"
           },
@@ -1113,7 +1113,7 @@
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -1137,46 +1137,46 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
             "name": "not_overtime",
             "desc": "答题时间是否在标准答案1.5倍内",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
             "name": "define_first_sentence",
             "desc": "定义是否在第一句",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
             "name": "order_define_explain",
             "desc": "顺序是否是定义+解释",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           }
         ],
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -1200,46 +1200,46 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
             "name": "not_overtime",
             "desc": "答题时间是否在标准答案1.5倍内",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
             "name": "define_first_sentence",
             "desc": "定义是否在第一句",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           },
           {
             "name": "order_define_explain",
             "desc": "顺序是否是定义+解释",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
           }
         ],
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：1（0/1）\n        order_define_explain（顺序是否是定义+解释）：1（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：1（0/1）\n order_define_explain（顺序是否是定义+解释）：1（0/1）"
       }
     },
     {
@@ -1263,46 +1263,46 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
             "name": "not_overtime",
             "desc": "答题时间是否在标准答案1.5倍内",
             "result": 1,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
             "name": "define_first_sentence",
             "desc": "定义是否在第一句",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
             "name": "order_define_explain",
             "desc": "顺序是否是定义+解释",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           }
         ],
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n        keyword_first_sentence（关键词是否在第一句）：1（0/1）\n        keyword_no_repeat（是否未重复关键词）：1（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 1（0/1）\n keyword_first_sentence（关键词是否在第一句）：1（0/1）\n keyword_no_repeat（是否未重复关键词）：1（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：1（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     },
     {
@@ -1352,46 +1352,46 @@
         "passed": true,
         "extra_points": [
           {
-            "name": "keyword",
-            "desc": "关键词是否存在",
+            "name": "semantic_clarity",
+            "desc": "语义明确性",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
-            "name": "keyword_first_sentence",
-            "desc": "关键词是否在第一句",
+            "name": "semantic_directness",
+            "desc": "开门见山",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
-            "name": "keyword_no_repeat",
-            "desc": "是否未重复关键词",
+            "name": "semantic_conciseness",
+            "desc": "语义精炼/不啰嗦",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
             "name": "not_overtime",
             "desc": "答题时间是否在标准答案1.5倍内",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
             "name": "define_first_sentence",
             "desc": "定义是否在第一句",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           },
           {
             "name": "order_define_explain",
             "desc": "顺序是否是定义+解释",
             "result": 0,
-            "reason": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+            "reason": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
           }
         ],
         "model_cot": "",
         "observation": null,
         "raw_decision_text": "define（是否有定义）： 1（0/1）",
-        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n        keyword_first_sentence（关键词是否在第一句）：0（0/1）\n        keyword_no_repeat（是否未重复关键词）：0（0/1）\n        not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n        define_first_sentence（定义是否在第一句）：0（0/1）\n        order_define_explain（顺序是否是定义+解释）：0（0/1）"
+        "raw_bonus_text": "keyword（关键词是否存在）： 0（0/1）\n keyword_first_sentence（关键词是否在第一句）：0（0/1）\n keyword_no_repeat（是否未重复关键词）：0（0/1）\n not_overtime（答题时间是否在标准答案1.5倍内）：0（0/1）\n define_first_sentence（定义是否在第一句）：0（0/1）\n order_define_explain（顺序是否是定义+解释）：0（0/1）"
       }
     }
   ]

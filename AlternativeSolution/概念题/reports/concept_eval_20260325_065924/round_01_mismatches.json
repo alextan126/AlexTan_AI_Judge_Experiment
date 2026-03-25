@@ -1,0 +1,587 @@
+[
+  {
+    "item_index": 1,
+    "sample_file": "FullStack_Sample1.md",
+    "case_id": "C-01",
+    "question": "在 Web 端业务管理系统开发场景中，什么是 RESTful API？",
+    "simulated_answer": "RESTful API 是一种基于资源、使用统一接口并通过 HTTP 方法对资源进行操作的 Web 接口设计风格。它把系统中的数据抽象成资源，通过 URL 定位资源，并结合 GET、POST、PUT、DELETE 等请求方式完成查询、新增、修改和删除，从而让前后端交互更清晰、规范。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      }
+    ],
+    "human_notes": "第一句直接给出完整定义，并包含关键词一次；后面再做展开解释，避免重复关键词。",
+    "ai_extracted_definition": "一种基于资源、使用统一接口并通过 HTTP 方法对资源进行操作的 Web 接口设计风格"
+  },
+  {
+    "item_index": 2,
+    "sample_file": "FullStack_Sample1.md",
+    "case_id": "C-02",
+    "question": "在 Web 端业务管理系统开发场景中，什么是 RESTful API？",
+    "simulated_answer": "它是一种以资源为核心、通过统一接口规范来组织网络请求的 Web 接口设计方式。RESTful API 强调把业务对象抽象成资源，RESTful API 通常会使用 URL 表示资源，并结合不同的 HTTP 方法完成对应操作，所以这样的设计更容易理解和维护。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      }
+    ],
+    "human_notes": "第一句先定义但不放关键词；第二句开始补关键词，并刻意重复两次。",
+    "ai_extracted_definition": "以资源为核心、通过统一接口规范来组织网络请求的 Web 接口设计方式"
+  },
+  {
+    "item_index": 3,
+    "sample_file": "FullStack_Sample1.md",
+    "case_id": "C-03",
+    "question": "在 Web 端业务管理系统开发场景中，什么是 RESTful API？",
+    "simulated_answer": "RESTful API 在业务管理系统里通常用来规范前后端的数据交互，让不同模块按照统一方式访问和处理数据。它本质上是一种基于资源、通过统一接口并结合 HTTP 方法对资源进行操作的 Web 接口设计风格。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "先解释用途，再给定义；关键词放在第一句且只出现一次，故意不满足“先定义后解释”。",
+    "ai_extracted_definition": "一种基于资源、通过统一接口并结合 HTTP 方法对资源进行操作的 Web 接口设计风格"
+  },
+  {
+    "item_index": 5,
+    "sample_file": "FullStack_Sample1.md",
+    "case_id": "C-05",
+    "question": "在 Web 端业务管理系统开发场景中，什么是 RESTful API？",
+    "simulated_answer": "其实在后台管理系统开发里，很多人都会接触到这种接口写法，因为它在项目协作、联调效率、接口可读性以及后续维护上都比较常见。前端在请求数据的时候，往往会按照固定的路径去拿列表、详情、创建、更新和删除相关的信息；后端在设计时，也会尽量让不同模块的访问方式保持一致，这样团队成员理解成本会更低，文档也会更容易整理，测试时也更方便覆盖常见场景。再进一步说，这种方式通常会把业务中的对象拆成一个个可以被访问的单元，然后配合不同的请求动作去处理它们，所以它在很多中后台、管理平台、运营系统、内容系统中都很常见。说得更正式一点，它是一种以资源为核心、借助统一接口约束，并通过 HTTP 请求动作完成增删改查的 Web 接口设计方式。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "not_overtime",
+        "expected": 0,
+        "actual": 1
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "前面故意先铺垫和解释，最后才下定义；不用题面关键词，整体故意写长一些，让加分项尽量全部失分。",
+    "ai_extracted_definition": "一种以资源为核心、借助统一接口约束，并通过 HTTP 请求动作完成增删改查的 Web 接口设计方式"
+  },
+  {
+    "item_index": 6,
+    "sample_file": "FullStack_Sample2.md",
+    "case_id": "C-01",
+    "question": "在前后端分离的系统设计场景中，什么是前后端联调？",
+    "simulated_answer": "前后端联调是前端与后端开发人员基于约定的接口协议，将各自独立开发的模块进行集成对接并验证数据交互正确性的协作过程。在前后端分离架构下，前端通过 HTTP 请求调用后端 API，联调阶段主要确认请求参数、响应结构、状态码及异常处理等是否与接口文档一致，从而保证整个系统端到端的功能完整性。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      }
+    ],
+    "human_notes": "标准回答。关键词\"接口协议\"\"集成对接\"\"数据交互\"均出现在第一句且不重复，结构为定义→解释。",
+    "ai_extracted_definition": "前端与后端开发人员基于约定的接口协议，将各自独立开发的模块进行集成对接并验证数据交互正确性的协作过程"
+  },
+  {
+    "item_index": 7,
+    "sample_file": "FullStack_Sample2.md",
+    "case_id": "C-02",
+    "question": "在前后端分离的系统设计场景中，什么是前后端联调？",
+    "simulated_answer": "前后端联调是前端和后端在各自完成开发后，将两端的功能模块连通起来共同验证的过程。在这个过程中，双方需要根据接口协议来核对请求和响应的数据交互是否正确，如果数据交互出现偏差，就需要回溯接口协议的定义来排查问题，确保系统能正常运行。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      }
+    ],
+    "human_notes": "定义在第一句但不含关键词（\"接口协议\"\"数据交互\"）；关键词从第二句开始出现，其中\"接口协议\"出现两次、\"数据交互\"出现两次，构成重复。",
+    "ai_extracted_definition": "前端和后端在各自完成开发后，将两端的功能模块连通起来共同验证的过程"
+  },
+  {
+    "item_index": 8,
+    "sample_file": "FullStack_Sample2.md",
+    "case_id": "C-03",
+    "question": "在前后端分离的系统设计场景中，什么是前后端联调？",
+    "simulated_answer": "在前后端分离架构中，前端和后端通过接口协议进行数据交互，双方各自独立开发后需要有一个集成验证的环节来确认系统能否正常运转。这个环节就是前后端联调，即双方按照约定的 API 规范将各自模块对接起来，验证端到端功能正确性的协作过程。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "第一句是解释/背景（含关键词\"接口协议\"\"数据交互\"），第二句才给出定义，顺序为解释→定义。关键词不重复。",
+    "ai_extracted_definition": "按照约定的 API 规范将前端和后端模块对接起来，验证端到端功能正确性的协作过程"
+  },
+  {
+    "item_index": 10,
+    "sample_file": "FullStack_Sample2.md",
+    "case_id": "C-05",
+    "question": "在前后端分离的系统设计场景中，什么是前后端联调？",
+    "simulated_answer": "这个问题其实挺常见的，在实际工作中大家都会碰到。现在大部分公司的项目都是把页面展示的部分和服务器处理的部分分开来做，各做各的，这样的好处是团队可以并行开发，互不阻塞，效率比较高。但是呢，分开做就会带来一个问题，就是两边做完了之后要合到一起看看能不能跑通，毕竟页面上要展示的数据是从服务器那边拿的，如果两边对不上就会出问题。这个过程中可能会遇到很多麻烦事，比如字段名不一样、数据格式不一致、请求方式搞错了等等，都需要两边的人坐下来一起排查。有时候前端觉得是后端的问题，后端觉得是前端的问题，来回扯皮也是常有的事。所以总结来说，它就是把页面端和服务器端各自完成的模块拼到一起，确认彼此的通信和功能能够正常衔接的一个验收步骤。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "用\"页面展示的部分和服务器处理的部分\"\"两边合到一起\"\"通信和功能衔接\"等模糊说法替代关键词（\"接口协议\"\"数据交互\"\"集成对接\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。",
+    "ai_extracted_definition": "把页面端和服务器端各自完成的模块拼到一起，确认彼此的通信和功能能够正常衔接的一个验收步骤"
+  },
+  {
+    "item_index": 11,
+    "sample_file": "FullStack_Sample3.md",
+    "case_id": "C-01",
+    "question": "在 Vue 组件化开发场景中，什么是组件化开发？",
+    "simulated_answer": "组件化开发是一种将用户界面拆分为独立、可复用的封装单元，每个单元自包含模板、逻辑与样式并通过定义好的接口进行组合的开发模式。在 Vue 中，每个 .vue 单文件组件就是一个封装单元，组件之间通过 props 向下传递数据、通过 emit 向上触发事件来通信，从而实现高内聚低耦合的 UI 构建。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      }
+    ],
+    "human_notes": "标准回答。关键词\"可复用\"\"封装单元\"\"接口\"均出现在第一句且不重复，结构为定义→解释。",
+    "ai_extracted_definition": "将用户界面拆分为独立、可复用的封装单元，每个单元自包含模板、逻辑与样式并通过定义好的接口进行组合的开发模式"
+  },
+  {
+    "item_index": 12,
+    "sample_file": "FullStack_Sample3.md",
+    "case_id": "C-02",
+    "question": "在 Vue 组件化开发场景中，什么是组件化开发？",
+    "simulated_answer": "组件化开发是一种将页面按功能模块进行拆分，使各模块独立管理自身状态与视图的开发模式。每个模块作为一个封装单元是可复用的，可以在不同页面中反复使用，这种可复用的封装单元通过约定的接口进行组合，大幅降低了维护成本。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      }
+    ],
+    "human_notes": "定义在第一句但不含关键词（\"封装单元\"\"可复用\"\"接口\"）；关键词从第二句开始出现，\"封装单元\"出现两次、\"可复用\"出现两次，构成重复。",
+    "ai_extracted_definition": "将页面按功能模块进行拆分，使各模块独立管理自身状态与视图的开发模式"
+  },
+  {
+    "item_index": 13,
+    "sample_file": "FullStack_Sample3.md",
+    "case_id": "C-03",
+    "question": "在 Vue 组件化开发场景中，什么是组件化开发？",
+    "simulated_answer": "在 Vue 项目中，将页面划分为多个可复用的封装单元并通过接口进行通信，可以显著提升代码的可维护性和开发效率。这种做法就是组件化开发，即把 UI 拆分为自包含模板、逻辑与样式的独立模块，再通过 props 和 emit 组合成完整应用的开发模式。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "第一句是解释/背景（含关键词\"可复用\"\"封装单元\"\"接口\"），第二句才给出定义，顺序为解释→定义。关键词不重复。",
+    "ai_extracted_definition": "将页面划分为多个可复用的封装单元，把 UI 拆分为自包含模板、逻辑与样式的独立模块的开发模式"
+  },
+  {
+    "item_index": 15,
+    "sample_file": "FullStack_Sample3.md",
+    "case_id": "C-05",
+    "question": "在 Vue 组件化开发场景中，什么是组件化开发？",
+    "simulated_answer": "嗯这个问题的话，其实在前端开发中大家一直都在追求怎么把代码写得更有条理、更好管理。早期的前端项目代码都写在一起，HTML、CSS、JavaScript 混在一堆，项目一大就特别乱，改一个地方可能影响到别的地方，排查问题也很困难。后来大家就开始思考能不能把页面按功能切成一块一块的，每一块自己管自己的东西，互相不干扰，需要交流的时候就通过一些约定好的方式来传递信息。再后来框架也开始支持这种写法，比如 Vue 里可以用 .vue 文件把模板、样式和逻辑写到一起。这样做的好处是每一块都可以单独拿出来在别的地方再用，维护的时候也只需要关注那一小块就行了。所以总结来说，它就是把一个大的页面按照功能职责切成多个小的独立块，每个块自己管理自身的显示和行为，再把这些小块拼装起来形成完整页面的一种做法。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "用\"切成一块一块的\"\"独立块\"\"拼装起来\"等模糊说法替代关键词（\"可复用\"\"封装单元\"\"接口\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。",
+    "ai_extracted_definition": "把一个大的页面按照功能职责切成多个小的独立块，每个块自己管理自身的显示和行为，再把这些小块拼装起来形成完整页面的一种做法"
+  },
+  {
+    "item_index": 16,
+    "sample_file": "FullStack_Sample4.md",
+    "case_id": "C-01",
+    "question": "在 MySQL 数据存储与查询优化场景中，什么是数据库索引？",
+    "simulated_answer": "数据库索引是一种基于特定列构建的有序数据结构，用于加速查询时的数据检索并减少全表扫描。在 MySQL 中，最常用的索引实现是 B+ 树，它将索引列的值按顺序组织在多层节点中，查询时通过逐层定位快速缩小搜索范围，从而将时间复杂度从全表的 O(n) 降低到 O(log n) 级别。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      }
+    ],
+    "human_notes": "标准回答。关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"均出现在第一句且不重复，结构为定义→解释。",
+    "ai_extracted_definition": "数据库索引是一种基于特定列构建的有序数据结构，用于加速查询时的数据检索并减少全表扫描"
+  },
+  {
+    "item_index": 17,
+    "sample_file": "FullStack_Sample4.md",
+    "case_id": "C-02",
+    "question": "在 MySQL 数据存储与查询优化场景中，什么是数据库索引？",
+    "simulated_answer": "数据库索引是数据库管理系统为表中的列额外维护的一种辅助结构，用于提升查询效率。它的核心原理是构建一个有序数据结构来实现快速的数据检索，避免每次查询都进行全表扫描。如果没有这种有序数据结构，数据库就不得不进行全表扫描，逐行比较，在数据量大时性能会急剧下降。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      }
+    ],
+    "human_notes": "定义在第一句但不含关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"）；关键词从第二句开始出现，\"有序数据结构\"出现两次、\"全表扫描\"出现两次，构成重复。",
+    "ai_extracted_definition": "为表中列额外维护的一种辅助结构，用于提升查询效率"
+  },
+  {
+    "item_index": 18,
+    "sample_file": "FullStack_Sample4.md",
+    "case_id": "C-03",
+    "question": "在 MySQL 数据存储与查询优化场景中，什么是数据库索引？",
+    "simulated_answer": "在 MySQL 中，当数据量很大时，如果没有合适的有序数据结构来辅助数据检索，每次查询都会退化为全表扫描，性能极差。而数据库索引正是为解决这个问题而设计的，它是基于特定列构建的有序结构，能够让查询引擎快速定位目标行而无需遍历整张表。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "第一句是解释/背景（含关键词\"有序数据结构\"\"数据检索\"\"全表扫描\"），第二句才给出定义，顺序为解释→定义。关键词不重复。",
+    "ai_extracted_definition": "基于特定列构建的有序结构，用来辅助数据检索并快速定位目标行"
+  },
+  {
+    "item_index": 20,
+    "sample_file": "FullStack_Sample4.md",
+    "case_id": "C-05",
+    "question": "在 MySQL 数据存储与查询优化场景中，什么是数据库索引？",
+    "simulated_answer": "这个问题嘛，要说清楚得从数据库怎么存数据说起。数据库里的数据都是一行一行存在磁盘上的，如果你想找某一行，最笨的办法就是从头到尾一行一行地看过去，数据少的时候还好，数据一多就特别慢。所以后来人们就想到了一个办法，就好像书的目录一样，你翻书的时候不用一页页翻，直接看目录就知道第几页了。数据库里也是类似的道理，就是在你经常查询的那些列上面额外建一个东西，这个东西会把那些列的值按照一定的方式排列好，这样查的时候就可以很快地跳到你想要的位置，不用再一行一行地扫了。而且这个额外建的东西虽然能加快读取速度，但它本身也会占磁盘空间，插入和更新数据的时候也需要同步维护它，所以也不是越多越好。总结来说，它本质上就是数据库在表的某些列上额外维护的一个排好序的辅助结构，让查询可以快速跳转到目标位置而不必逐行遍历。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "not_overtime",
+        "expected": 0,
+        "actual": 1
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "用\"额外建一个东西\"\"排列好\"\"跳到你想要的位置\"等模糊说法替代关键词（\"有序数据结构\"\"数据检索\"\"全表扫描\"均未出现）；开头大量废话导致定义不在第一句；顺序为解释→定义；篇幅远超标准答案 1.5 倍。",
+    "ai_extracted_definition": "数据库在表的某些列上额外维护的一个排好序的辅助结构"
+  },
+  {
+    "item_index": 21,
+    "sample_file": "FullStack_Sample5.md",
+    "case_id": "C-01",
+    "question": "在高并发业务系统性能优化场景中，什么是缓存（Cache）？",
+    "simulated_answer": "缓存是一种将频繁访问的数据暂存在高速存储介质中，以减少对慢速数据源重复访问的技术机制。在高并发系统中，缓存可以显著降低数据库查询压力，提升响应速度，常见实现包括本地内存缓存和分布式缓存如Redis。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      }
+    ],
+    "human_notes": "",
+    "ai_extracted_definition": "将频繁访问的数据暂存在高速存储介质中，以减少对慢速数据源重复访问的技术机制"
+  },
+  {
+    "item_index": 22,
+    "sample_file": "FullStack_Sample5.md",
+    "case_id": "C-02",
+    "question": "在高并发业务系统性能优化场景中，什么是缓存（Cache）？",
+    "simulated_answer": "它是一种通过在高速存储介质中暂存热点数据来加速数据读取的技术。在高并发场景下，缓存能够拦截大量重复请求，避免直接访问数据库。缓存的命中率直接影响系统性能，合理的缓存策略包括LRU淘汰、TTL过期等机制。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      }
+    ],
+    "human_notes": "",
+    "ai_extracted_definition": "通过在高速存储介质中暂存热点数据来加速数据读取的技术"
+  },
+  {
+    "item_index": 23,
+    "sample_file": "FullStack_Sample5.md",
+    "case_id": "C-03",
+    "question": "在高并发业务系统性能优化场景中，什么是缓存（Cache）？",
+    "simulated_answer": "缓存在实际项目中非常常用，比如我们用Redis存session、用本地Map存配置，目的都是为了减少重复计算和IO开销。总的来说，它是一种将高频访问数据暂存于高速存储层以降低后端访问延迟的技术。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 1,
+        "actual": null
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "",
+    "ai_extracted_definition": "将高频访问数据暂存于高速存储层以降低后端访问延迟的技术"
+  },
+  {
+    "item_index": 25,
+    "sample_file": "FullStack_Sample5.md",
+    "case_id": "C-05",
+    "question": "在高并发业务系统性能优化场景中，什么是缓存（Cache）？",
+    "simulated_answer": "嗯，这个问题挺好的，让我想一想啊。其实在我们做系统的时候经常会遇到性能问题对吧，就是数据库扛不住啊，接口慢啊之类的。然后呢，业界就有了一种解决思路，就是说把那些经常被查的数据放到一个速度更快的地方，这样就不用每次都去查数据库了。所以呢，它本质上就是一种用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问。这个概念其实很早就有了，从CPU的L1 L2到操作系统的页面置换，再到我们应用层的各种方案，都是同样的思想。",
+    "point_mismatches": [
+      {
+        "point_name": "keyword",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_first_sentence",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "keyword_no_repeat",
+        "expected": 0,
+        "actual": null
+      },
+      {
+        "point_name": "not_overtime",
+        "expected": 0,
+        "actual": 1
+      },
+      {
+        "point_name": "order_define_explain",
+        "expected": 0,
+        "actual": 1
+      }
+    ],
+    "human_notes": "",
+    "ai_extracted_definition": "用空间换时间的数据暂存技术手段，通过在高速存储层保留热点数据副本来减少对原始数据源的访问"
+  }
+]

@@ -17,6 +17,15 @@
 - `extra_points`
 - `passed`
 
+当前概念题加分项的新命名约定：
+
+- `semantic_clarity`：语义明确性
+- `semantic_directness`：开门见山
+- `semantic_conciseness`：语义精炼/不啰嗦
+- `not_overtime`
+- `define_first_sentence`
+- `order_define_explain`
+
 ## 主要文件
 
 - `sampleData.md`：人工整理的 markdown 样本

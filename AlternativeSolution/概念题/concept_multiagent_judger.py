@@ -24,9 +24,9 @@ DECISION_POINT_DESCRIPTIONS = {
 }
 
 EXTRA_POINT_DESCRIPTIONS = {
-    "keyword": "关键词是否存在",
-    "keyword_first_sentence": "关键词是否在第一句",
-    "keyword_no_repeat": "是否未重复关键词",
+    "semantic_clarity": "语义明确性",
+    "semantic_directness": "开门见山",
+    "semantic_conciseness": "语义精炼/不啰嗦",
     "not_overtime": "答题时间是否在标准答案1.5倍内",
     "define_first_sentence": "定义是否在第一句",
     "order_define_explain": "顺序是否是定义+解释",
@@ -35,33 +35,44 @@ EXTRA_POINT_DESCRIPTIONS = {
 BONUS_POINT_ORDER = list(EXTRA_POINT_DESCRIPTIONS.keys())
 
 BONUS_POINT_GUIDANCE = {
-    "keyword": (
-        "judge semantic subject presence rather than exact token matching: pass only when "
-        "the answer clearly names the core subject or a direct semantic equivalent instead "
-        "of relying on vague pronouns, indirect references, or a long绕圈子的 lead-in."
+    "semantic_clarity": (
+        "判断“语义明确性”，回答中是否明确点出了题目所问核心概念，"
+        "或者用了直接等价的语义表达，就可以判 1；如果回答始终使用“它”“这种方式”"
+        "“这个东西”之类模糊指代，或者一直绕圈子不明确点题，则判 0。"
     ),
-    "keyword_first_sentence": (
-        "judge semantic directness in the first sentence: pass only when the first sentence "
-        "already introduces the core subject or a direct semantic equivalent; fail when the "
-        "first sentence is mostly background, filler, examples, or indirect setup."
+    "semantic_directness": (
+        "判断“开门见山”。第一句是否直接引出题目所问核心概念，"
+        "或者给出直接等价的语义表达，就判 1；如果第一句主要是在铺垫背景、说废话、举例子、"
+        "绕弯子，没有直接点题，则判 0。"
     ),
-    "keyword_no_repeat": (
-        "judge semantic conciseness rather than literal repetition counts: pass when the "
-        "core subject is established once and the rest of the answer naturally elaborates; "
-        "fail when later sentences redundantly restate the same core subject or its close "
-        "semantic equivalent in a repetitive, unnatural way."
+    "semantic_conciseness": (
+        "判断“语义精炼/不啰嗦”，回答在明确点题后，后续内容是否是对概念的有效补充。后续内容是"
+        "自然展开解释，没有反复用不同说法重复同一个核心概念，就判 1；如果回答多次重复表达"
+        "同一个核心概念，语义上显得啰嗦、车轱辘话明显，则判 0。"
     ),
     "not_overtime": (
-        "use answer length and verbosity as a proxy; concise answers pass, overly long "
-        "rambling answers fail."
+        "用回答长度和冗长度作为近似标准；简洁、控制在合理篇幅内判 1，明显过长、啰嗦、"
+        "离题扩写严重则判 0。"
     ),
     "define_first_sentence": (
-        "pass only when the actual defining statement appears in the first sentence, rather "
-        "than starting with background or examples."
+        "回答是否只在第一句就给出真正且正确的定义。给出时判 1；如果先讲背景、举例子、铺垫，再下定义，则判 0。"
     ),
     "order_define_explain": (
-        "pass only when the answer defines first and explains after."
+        "回答是否遵循总分总或者总分的有逻辑的答题顺序。若在回答时有逻辑，如先给定义在举例子判 1；"
+        "如果回答正确但无逻辑，东一句西一句，则判 0。"
     ),
+}
+
+POINT_NAME_ALIASES = {
+    "keyword": "semantic_clarity",
+    "keyword_first_sentence": "semantic_directness",
+    "keyword_no_repeat": "semantic_conciseness",
+    "semantic_clarity": "semantic_clarity",
+    "semantic_directness": "semantic_directness",
+    "semantic_conciseness": "semantic_conciseness",
+    "not_overtime": "not_overtime",
+    "define_first_sentence": "define_first_sentence",
+    "order_define_explain": "order_define_explain",
 }
 
 DEFAULT_MODEL = os.getenv("CONCEPT_JUDGER_MODEL", "gpt-4.1-mini")
@@ -169,17 +180,15 @@ def _first_sentence(text: str) -> str:
 
 def _decision_agent_prompt(question: str, user_answer: str) -> tuple[str, str]:
     system_prompt = (
-        "You are the decision agent for a Chinese concept-question judging workflow. "
-        "Judge only the decision point `define` and extract the candidate's own core "
-        "definition phrase if the answer contains a definition. "
-        "Return JSON only with this shape: "
+        "你是中文概念题评分流程中的 decision agent。你只负责判断决定项 `define`，"
+        "并在回答包含定义时，提取出候选人自己表述的核心定义短语。"
+        "你必须且只能返回如下格式的 JSON："
         '{"define": 0 or 1, "reason": "...", "key_definition": "..."}.\n'
-        "Rules:\n"
-        "- `define=1` only when the answer clearly states what the concept is.\n"
-        "- `key_definition` must be a short phrase copied or tightly paraphrased from "
-        "the user's answer, such as `Web 接口设计风格`.\n"
-        "- If `define=0`, return an empty string for `key_definition`.\n"
-        "- Do not judge bonus points in this step."
+        "规则：\n"
+        "- `define=1`：只有当回答清晰地陈述了该概念是什么时才给 1 分。\n"
+        "- `key_definition`：必须是从用户回答中复制或紧密改写的简短短语。\n"
+        "- 如果 `define=0`，则 `key_definition` 返回空字符串。\n"
+        "- 在这一步不要判断任何加分项。"
     )
     user_prompt = (
         f"Question:\n{question}\n\n"
@@ -196,15 +205,13 @@ def _bonus_agent_prompt(
     key_definition: str,
 ) -> tuple[str, str]:
     system_prompt = (
-        "You are an independent bonus-point judging agent for a Chinese concept-question "
-        "workflow. Judge exactly one point and return JSON only with this shape: "
+        "你是中文概念题评分流程中的独立加分项评审 agent。你一次只判断一个点，"
+        "并且只能返回如下 JSON："
         '{"name": "...", "result": 0 or 1, "reason": "..."}.\n'
-        "Use the extracted key definition from the decision agent as the anchor for the "
-        "core concept. Make a strict 0/1 judgment for the requested point only.\n"
-        "Important: for the three `keyword*` points, do semantic judging instead of exact "
-        "string matching. Treat close paraphrases as the same concept, but do not reward "
-        "answers that stay vague or repeatedly restate the same idea.\n"
-        "Point-specific guidance:\n"
+        "使用 decision agent 抽取出的 key definition 作为核心概念锚点。"
+        "你只对当前请求的单个点做严格的 0/1 判断。\n"
+        f"`name` 字段必须返回当前点位名 `{point_name}`，不要改写成其他别名。\n"
+        "当前点位说明：\n"
         f"- `{point_name}`: {BONUS_POINT_GUIDANCE[point_name]}"
     )
     user_prompt = (
@@ -236,6 +243,11 @@ def _normalize_binary(value: Any, field_name: str) -> int:
     if isinstance(value, str) and value.strip() in {"0", "1"}:
         return int(value.strip())
     raise JudgerError(f"Field `{field_name}` must be 0 or 1, got: {value!r}")
+
+
+def _canonicalize_point_name(name: str) -> str:
+    normalized = name.strip()
+    return POINT_NAME_ALIASES.get(normalized, normalized)
 
 
 def judge_concept_answer(
@@ -275,7 +287,9 @@ def judge_concept_answer(
             point_payload = _invoke_json_agent(llm, system_prompt, user_prompt)
             result = _normalize_binary(point_payload.get("result"), point_name)
             reason = str(point_payload.get("reason", "")).strip() or "No reason provided."
-            returned_name = str(point_payload.get("name", point_name)).strip() or point_name
+            returned_name = _canonicalize_point_name(
+                str(point_payload.get("name", point_name)).strip() or point_name
+            )
             if returned_name != point_name:
                 raise JudgerError(
                     f"Point agent returned `{returned_name}` but `{point_name}` was expected."

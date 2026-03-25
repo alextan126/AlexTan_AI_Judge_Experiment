@@ -16,12 +16,24 @@ DECISION_POINT_DESCRIPTIONS = {
 }
 
 EXTRA_POINT_DESCRIPTIONS = {
-    "keyword": "关键词是否存在",
-    "keyword_first_sentence": "关键词是否在第一句",
-    "keyword_no_repeat": "是否未重复关键词",
+    "semantic_clarity": "语义明确性",
+    "semantic_directness": "开门见山",
+    "semantic_conciseness": "语义精炼/不啰嗦",
     "not_overtime": "答题时间是否在标准答案1.5倍内",
     "define_first_sentence": "定义是否在第一句",
     "order_define_explain": "顺序是否是定义+解释",
+}
+
+RAW_TO_CANONICAL_POINT_NAME = {
+    "keyword": "semantic_clarity",
+    "keyword_first_sentence": "semantic_directness",
+    "keyword_no_repeat": "semantic_conciseness",
+    "semantic_clarity": "semantic_clarity",
+    "semantic_directness": "semantic_directness",
+    "semantic_conciseness": "semantic_conciseness",
+    "not_overtime": "not_overtime",
+    "define_first_sentence": "define_first_sentence",
+    "order_define_explain": "order_define_explain",
 }
 
 SECTION_RE = re.compile(r"^##\s+(.+?)\n(.*?)(?=^##\s+|\Z)", re.M | re.S)
@@ -69,10 +81,11 @@ def _parse_extra_points(extra_text: str, notes: str, passed: bool) -> list[dict[
 
     points: list[dict[str, Any]] = []
     for name, result in POINT_LINE_RE.findall(stripped):
+        canonical_name = RAW_TO_CANONICAL_POINT_NAME.get(name, name)
         points.append(
             {
-                "name": name,
-                "desc": EXTRA_POINT_DESCRIPTIONS.get(name, ""),
+                "name": canonical_name,
+                "desc": EXTRA_POINT_DESCRIPTIONS.get(canonical_name, ""),
                 "result": int(result),
                 "reason": notes or stripped,
             }

@@ -24,13 +24,26 @@ from concept_multiagent_judger import JudgerError, judge_concept_answer  # noqa:
 
 POINT_ORDER = [
     ("decision_points", "define"),
-    ("extra_points", "keyword"),
-    ("extra_points", "keyword_first_sentence"),
-    ("extra_points", "keyword_no_repeat"),
+    ("extra_points", "semantic_clarity"),
+    ("extra_points", "semantic_directness"),
+    ("extra_points", "semantic_conciseness"),
     ("extra_points", "not_overtime"),
     ("extra_points", "define_first_sentence"),
     ("extra_points", "order_define_explain"),
 ]
+
+POINT_NAME_ALIASES = {
+    "keyword": "semantic_clarity",
+    "keyword_first_sentence": "semantic_directness",
+    "keyword_no_repeat": "semantic_conciseness",
+    "semantic_clarity": "semantic_clarity",
+    "semantic_directness": "semantic_directness",
+    "semantic_conciseness": "semantic_conciseness",
+    "not_overtime": "not_overtime",
+    "define_first_sentence": "define_first_sentence",
+    "order_define_explain": "order_define_explain",
+    "define": "define",
+}
 
 
 def _load_ground_truth(path: Path) -> dict[str, Any]:
@@ -42,7 +55,11 @@ def _load_ground_truth(path: Path) -> dict[str, Any]:
 
 
 def _point_map(block: dict[str, Any], key: str) -> dict[str, int]:
-    return {point["name"]: int(point["result"]) for point in block.get(key, [])}
+    mapped: dict[str, int] = {}
+    for point in block.get(key, []):
+        canonical_name = POINT_NAME_ALIASES.get(point["name"], point["name"])
+        mapped[canonical_name] = int(point["result"])
+    return mapped
 
 
 def _build_record(round_index: int, sys_items: list[dict[str, Any]]) -> dict[str, Any]:
