@@ -1,0 +1,452 @@
+[
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-01",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：高峰期连接池超时），A（选择方案 B），R（方案 B 能控制锁粒度，避免全局串行化），E（对比方案 A 的劣势，分析了为什么方案 B 能在保证一致性的同时维持高并发）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 2.76,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 能并发执行，方案 A 会排队），但缺少 E（没有深入分析为什么行锁能带来高并发，也没有分析连接池超时的根本原因）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 2.54,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-03",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题），A（明确选择了方案 B），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 3.93,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-04",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 A），后续的理由也是基于错误方案的辩护。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.63,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-05",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在方案 A 和方案 B 中做出选择，而是自己提出了一个无关的硬件升级和读写分离方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.99,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-01",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：海量订单查询缓慢，内存紧张，快速迭代），A（选择方案 A），R（方案 A 能带来数量级性能提升，解决核心瓶颈），E（深入分析了为什么 20% 的存储开销是值得的，以及如何在内存紧张和查询性能之间做权衡）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.57,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 A），R（方案 A 能降低复杂度，提升查询速度，空间换时间），但缺少 E（没有结合“快速迭代期”和“海量数据”的业务背景进行深度权衡分析，也没有说明如何应对内存紧张的风险）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 2.1,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-03",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 A），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 2.41,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-04",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 B），后续的理由虽然看似有逻辑，但违背了解决“查询响应缓慢”这一核心矛盾的初衷。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.91,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-05",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在方案 A 和方案 B 中做出选择，而是脱离题目设定自己提出了引入其他组件的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.66,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-01",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：日志激增，单表查询慢，需按时间范围定位），A（选择方案 B），R（方案 B 通过二级索引定位数据块，避免全表扫描），E（深入分析了方案 A 的致命缺陷：时间戳不唯一、单表索引膨胀、Redis 无法解决历史查询，从而反证方案 B 的合理性）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.56,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 能通过索引表定位块，避免全表扫描），但缺少 E（没有指出方案 A 中“唯一索引”的语义错误，也没有分析单表索引膨胀的底层原因，对方案 A 的反驳仅仅停留在“比较麻烦”这种表层认知）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.67,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-03",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 B），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.81,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-04",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 A），后续的理由完全忽视了日志时间戳不唯一的常识，也忽视了 Redis 无法解决海量历史日志查询的根本需求。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.59,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-05",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在题目给定的方案 A 和方案 B 中做出选择，而是脱离题目限制，直接提出了引入外部组件的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.75,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-01",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：海量日志检索慢，数据动态增长），A（选择方案 A），R（方案 A 避免全表扫描，支持动态增长），E（深入分析了方案 B 的致命缺陷：物理内存有限导致 OOM、缺乏持久化，从而反证方案 A 的工程合理性）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.96,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 A），R（方案 A 避免全表扫描，方案 B 内存放不下），但缺少 E（没有进一步分析方案 A 追加写入的扩展性优势，也没有提及方案 B 缺乏持久化等更深层次的工程隐患，只是停留在“内存放不下”的表层判断）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.73,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-03",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 A），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.72,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-04",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 B），后续的理由完全忽视了“海量数据动态增长”带来的无底洞般的内存成本，也缺乏对企业级系统持久化要求的认知。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.92,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-05",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在题目给定的方案 A 和方案 B 中做出选择，而是脱离题目限制，直接提出了引入外部大数据组件的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.97,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-01",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：大量日志导致数据库写入瓶颈），A（选择方案 B），R（方案 B 利用 Redis 缓冲并异步批量写入 MySQL），E（深入分析了方案 A 的反作用（维护索引拖慢写入），并解释了方案 B 为什么有效（内存操作削峰、批量插入减少 I/O））。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.77,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 用 Redis 提速并异步同步，方案 A 优化的是查询），但缺少 E（没有深入分析批量同步对降低 MySQL 磁盘 I/O 的核心作用，也没有指出维护 B+ 树索引对写入性能的实质性损害，只停留在“Redis 比 MySQL 快”的表面）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.57,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-03",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 B），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.46,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-04",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 A），后续的理由完全违背了数据库基本原理（建立索引会降低写入性能而不是提升），对方案 B 的反驳也过于片面。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.69,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-05",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在题目给定的方案 A 和方案 B 中做出选择，而是脱离题目限制，直接提出了使用第三方 SaaS 服务的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.65,
+      "level_match": false,
+      "score_match": true
+    }
+  }
+]

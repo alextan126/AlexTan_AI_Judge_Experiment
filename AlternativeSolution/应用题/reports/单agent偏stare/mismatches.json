@@ -1,0 +1,74 @@
+[
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 能并发执行，方案 A 会排队），但缺少 E（没有深入分析为什么行锁能带来高并发，也没有分析连接池超时的根本原因）。"
+    },
+    "single": {
+      "stare_level": "STARE",
+      "score": 3,
+      "reasoning": "候选人包含了完整的 STARE 要素：1) S/T：明确转述了题目中的问题，即高峰期出现数据库连接池超时和订单提交失败，需要在保证高并发的前提下优化方案；2) A：明确选择了正确答案方案 B；3) R：指出了方案 B 的直接收益，即“性能更好”“不同订单操作可以并发执行”“能带来更好的并发响应速度”；4) E：给出了合理的机制解释和对比分析，说明 MySQL 行锁可以只锁定相关行，从而允许不同订单并发执行，而 Redis 分布式锁会让关键写入在应用层串行排队，影响吞吐与响应速度。这已经满足‘因为...所以...’的底层逻辑解释要求。因此应评为 STARE，得 3 分。",
+      "components": {},
+      "elapsed_seconds": 4.59,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 A），R（方案 A 能降低复杂度，提升查询速度，空间换时间），但缺少 E（没有结合“快速迭代期”和“海量数据”的业务背景进行深度权衡分析，也没有说明如何应对内存紧张的风险）。"
+    },
+    "single": {
+      "stare_level": "STARE",
+      "score": 3,
+      "reasoning": "候选人回答包含了完整的 STARE 要素：1）S/T：准确转述了题目中的核心问题，即海量订单查询慢、当前是全表扫描、服务器内存紧张，需要提升检索效率；2）A：明确选择了正确答案方案 A；3）R：指出了直接收益，即建立多级索引后查找复杂度从 O(N) 降到 O(√N)，查询速度会明显提升；4）E：给出了合理的原因分析和 trade-off 判断，说明这是“空间换时间”，虽然增加约 20% 存储，但为了改善查询性能是值得的。虽然底层机制展开不算很多，但已经满足‘为什么这样选’的解释要求，因此可判为 STARE。",
+      "components": {},
+      "elapsed_seconds": 4.33,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 A），R（方案 A 避免全表扫描，方案 B 内存放不下），但缺少 E（没有进一步分析方案 A 追加写入的扩展性优势，也没有提及方案 B 缺乏持久化等更深层次的工程隐患，只是停留在“内存放不下”的表层判断）。"
+    },
+    "single": {
+      "stare_level": "STARE",
+      "score": 3,
+      "reasoning": "候选人包含了完整的 STARE 要素。S/T：明确转述了问题背景——海量日志查询慢，且数据量持续增长。A：明确选择了正确方案 A。R：指出了直接收益——按时间分块并通过索引表查找，查询速度比全表扫描快很多。E：给出了为什么的解释与对比分析——方案 B 虽然二分查找快，但需要把所有数据加载到内存，面对海量且持续增长的数据不可行，内存放不下；因此方案 A 更适合将大规模数据存储在磁盘并结合索引进行扩展。这已经满足“底层机制/合理 trade-off 分析”的要求，所以应评为 STARE，3 分。",
+      "components": {},
+      "elapsed_seconds": 3.51,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-02",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 用 Redis 提速并异步同步，方案 A 优化的是查询），但缺少 E（没有深入分析批量同步对降低 MySQL 磁盘 I/O 的核心作用，也没有指出维护 B+ 树索引对写入性能的实质性损害，只停留在“Redis 比 MySQL 快”的表面）。"
+    },
+    "single": {
+      "stare_level": "STARE",
+      "score": 3,
+      "reasoning": "候选人完整覆盖了 STARE 四个要素。S/T：准确转述了题目场景，即“大量用户日志导致数据库写入太慢，需要提升响应速度”。A：明确选择了正确答案 B。R：指出了方案 B 的直接收益，包括“Redis 是内存数据库，速度比 MySQL 快很多”“先写 Redis 后系统马上返回成功”“用户体验会更好”，以及异步再落 MySQL，这些都属于正确方案带来的直接结果。E：给出了合理的原因解释和对比分析：说明 Redis 基于内存，写入更快；通过先写 Redis、异步批量同步到 MySQL，能够把用户请求链路中的慢数据库写入剥离出去；同时指出方案 A 的索引主要优化查询，对写入速度帮助不大，反而建索引本身通常会增加写入维护成本。这已经构成了“为什么 B 更优”的机制性解释，因此应判为 STARE。",
+      "components": {},
+      "elapsed_seconds": 4.82,
+      "level_match": false,
+      "score_match": false
+    }
+  }
+]

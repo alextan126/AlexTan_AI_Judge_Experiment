@@ -1,0 +1,11 @@
+{
+  "judger_mode": "single",
+  "total_samples": 25,
+  "single": {
+    "level_correct": 22,
+    "score_correct": 22,
+    "mismatch_count": 3,
+    "accuracy_level": 0.88,
+    "accuracy_score": 0.88
+  }
+}

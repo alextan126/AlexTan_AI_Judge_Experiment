@@ -1,0 +1,527 @@
+[
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-01",
+    "question": "某企业级业务管理系统在高峰期出现数据库连接池等待超时，导致部分订单提交失败。作为全栈工程师，你需要从架构层面进行优化：方案 A 是在 Node.js 服务层引入 Redis 分布式锁来串行化关键订单写入操作；方案 B 是利用 MySQL 的行锁机制配合事务隔离级别调整来保证数据一致性。在保证系统高并发响应速度的前提下，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "针对高峰期数据库连接池等待超时导致订单提交失败的问题，我们需要在保证高并发的前提下进行架构优化。我会选择方案 B。方案 B 利用 MySQL 行锁机制配合事务隔离级别调整，能够将锁的粒度控制在数据行级别，从而避免了全局串行化带来的性能瓶颈。相比之下，方案 A 在 Node.js 层使用 Redis 分布式锁会将关键订单写入串行化，这不仅无法解决数据库连接池超时的问题，反而会因为应用层的排队导致整体吞吐量急剧下降。因此，方案 B 既能保证数据一致性，又能最大程度地维持系统的高并发响应能力。",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：高峰期连接池超时），A（选择方案 B），R（方案 B 能控制锁粒度，避免全局串行化），E（对比方案 A 的劣势，分析了为什么方案 B 能在保证一致性的同时维持高并发）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 2.22,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-02",
+    "question": "某企业级业务管理系统在高峰期出现数据库连接池等待超时，导致部分订单提交失败。作为全栈工程师，你需要从架构层面进行优化：方案 A 是在 Node.js 服务层引入 Redis 分布式锁来串行化关键订单写入操作；方案 B 是利用 MySQL 的行锁机制配合事务隔离级别调整来保证数据一致性。在保证系统高并发响应速度的前提下，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "题目提到系统在高峰期出现了数据库连接池超时和订单提交失败。为了解决这个问题并保证高并发，我选择方案 B。因为 MySQL 的行锁机制性能更好，它可以在保证数据一致性的同时，让不同的订单操作并发执行，不会像方案 A 那样把所有写入操作都堵在 Redis 锁那里排队，所以方案 B 能带来更好的并发响应速度。",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 能并发执行，方案 A 会排队），但缺少 E（没有深入分析为什么行锁能带来高并发，也没有分析连接池超时的根本原因）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 2.02,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-03",
+    "question": "某企业级业务管理系统在高峰期出现数据库连接池等待超时，导致部分订单提交失败。作为全栈工程师，你需要从架构层面进行优化：方案 A 是在 Node.js 服务层引入 Redis 分布式锁来串行化关键订单写入操作；方案 B 是利用 MySQL 的行锁机制配合事务隔离级别调整来保证数据一致性。在保证系统高并发响应速度的前提下，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "目前系统遇到了高峰期数据库连接池等待超时、订单提交失败的问题，要求我们在保证高并发响应速度的前提下进行架构优化。在方案 A 和方案 B 中，我会选择方案 B，也就是利用 MySQL 的行锁机制配合事务隔离级别调整来保证数据一致性。",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题），A（明确选择了方案 B），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.76,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-04",
+    "question": "某企业级业务管理系统在高峰期出现数据库连接池等待超时，导致部分订单提交失败。作为全栈工程师，你需要从架构层面进行优化：方案 A 是在 Node.js 服务层引入 Redis 分布式锁来串行化关键订单写入操作；方案 B 是利用 MySQL 的行锁机制配合事务隔离级别调整来保证数据一致性。在保证系统高并发响应速度的前提下，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "系统在高峰期出现了数据库连接池超时，导致订单提交失败，我们需要优化架构。我会选择方案 A。因为 Redis 是内存数据库，速度非常快，在 Node.js 服务层引入 Redis 分布式锁可以非常高效地控制并发，防止数据库被打挂。MySQL 的行锁太重了，会导致数据库压力更大，所以选 A 更好。",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 A），后续的理由也是基于错误方案的辩护。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.83,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample1.md",
+    "case_id": "A-05",
+    "question": "某企业级业务管理系统在高峰期出现数据库连接池等待超时，导致部分订单提交失败。作为全栈工程师，你需要从架构层面进行优化：方案 A 是在 Node.js 服务层引入 Redis 分布式锁来串行化关键订单写入操作；方案 B 是利用 MySQL 的行锁机制配合事务隔离级别调整来保证数据一致性。在保证系统高并发响应速度的前提下，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "遇到这种数据库超时的问题，通常是因为服务器的 CPU 或者内存不够用了。我建议直接给数据库服务器升级配置，比如增加 CPU 核心数和内存大小，或者使用读写分离架构，把查询请求分发到从库上，这样主库的压力就小了，订单提交自然就不会失败了。",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在方案 A 和方案 B 中做出选择，而是自己提出了一个无关的硬件升级和读写分离方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 2.03,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-01",
+    "question": "某企业级 Web 管理系统在处理海量订单数据时，发现数据库查询响应缓慢，现有方案为全表扫描。现需设计索引策略以提升检索效率：方案 A 采用建立多级索引文件，将查找复杂度从 O(N) 降至 O(√N)，但会增加约 20% 的存储空间；方案 B 保持当前无索引状态，不增加存储开销但维持 O(N) 的扫描成本。若该业务处于快速迭代期且服务器内存资源紧张，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "针对系统处理海量订单数据时全表扫描导致查询缓慢的问题，在方案 A 和方案 B 中，我会选择方案 A。虽然题目提到服务器内存资源紧张，但海量数据下的 O(N) 全表扫描已经是当前系统的核心瓶颈，严重影响了业务系统的可用性。方案 A 将复杂度降至 O(√N)，在海量数据场景下能带来数量级级别的性能提升。20% 的额外存储开销作为代价是完全可以接受的，因为在快速迭代期，查询性能直接关系到开发效率和用户体验，其带来的收益远大于存储成本。内存紧张的问题可以通过后续硬件扩容或优化其他内存占用来解决，但如果不解决查询缓慢的问题，业务将无法正常运转。",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：海量订单查询缓慢，内存紧张，快速迭代），A（选择方案 A），R（方案 A 能带来数量级性能提升，解决核心瓶颈），E（深入分析了为什么 20% 的存储开销是值得的，以及如何在内存紧张和查询性能之间做权衡）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.88,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-02",
+    "question": "某企业级 Web 管理系统在处理海量订单数据时，发现数据库查询响应缓慢，现有方案为全表扫描。现需设计索引策略以提升检索效率：方案 A 采用建立多级索引文件，将查找复杂度从 O(N) 降至 O(√N)，但会增加约 20% 的存储空间；方案 B 保持当前无索引状态，不增加存储开销但维持 O(N) 的扫描成本。若该业务处于快速迭代期且服务器内存资源紧张，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "题目说现在处理海量订单数据查询很慢，因为是全表扫描，而且服务器内存比较紧张。为了提升检索效率，我选择方案 A。因为方案 A 建立多级索引后，查找复杂度从 O(N) 降到了 O(√N)，查询速度会变快很多。虽然会增加 20% 的存储空间，但为了让查询不再缓慢，这个空间换时间的做法是值得的。",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 A），R（方案 A 能降低复杂度，提升查询速度，空间换时间），但缺少 E（没有结合“快速迭代期”和“海量数据”的业务背景进行深度权衡分析，也没有说明如何应对内存紧张的风险）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.91,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-03",
+    "question": "某企业级 Web 管理系统在处理海量订单数据时，发现数据库查询响应缓慢，现有方案为全表扫描。现需设计索引策略以提升检索效率：方案 A 采用建立多级索引文件，将查找复杂度从 O(N) 降至 O(√N)，但会增加约 20% 的存储空间；方案 B 保持当前无索引状态，不增加存储开销但维持 O(N) 的扫描成本。若该业务处于快速迭代期且服务器内存资源紧张，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "现在的系统在处理海量订单时查询响应缓慢，目前是全表扫描，同时业务处于快速迭代期且内存资源紧张。在方案 A（建立多级索引，复杂度降至 O(√N)，增加 20% 存储）和方案 B（保持无索引，维持 O(N) 扫描）之间，我会选择方案 A。",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 A），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.69,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-04",
+    "question": "某企业级 Web 管理系统在处理海量订单数据时，发现数据库查询响应缓慢，现有方案为全表扫描。现需设计索引策略以提升检索效率：方案 A 采用建立多级索引文件，将查找复杂度从 O(N) 降至 O(√N)，但会增加约 20% 的存储空间；方案 B 保持当前无索引状态，不增加存储开销但维持 O(N) 的扫描成本。若该业务处于快速迭代期且服务器内存资源紧张，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "系统目前处理海量订单查询缓慢，是全表扫描，而且内存资源紧张。我会选择方案 B。因为题目明确说了服务器内存资源紧张，方案 A 还要增加 20% 的存储空间，这会进一步加剧服务器的负担，甚至可能导致 OOM 宕机。在快速迭代期，保持系统的稳定性是最重要的，所以应该保持现状，不增加额外开销。",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 B），后续的理由虽然看似有逻辑，但违背了解决“查询响应缓慢”这一核心矛盾的初衷。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.82,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample2.md",
+    "case_id": "A-05",
+    "question": "某企业级 Web 管理系统在处理海量订单数据时，发现数据库查询响应缓慢，现有方案为全表扫描。现需设计索引策略以提升检索效率：方案 A 采用建立多级索引文件，将查找复杂度从 O(N) 降至 O(√N)，但会增加约 20% 的存储空间；方案 B 保持当前无索引状态，不增加存储开销但维持 O(N) 的扫描成本。若该业务处于快速迭代期且服务器内存资源紧张，你会选择方案 A 还是方案 B？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "我觉得这两个方案都不好。对于海量订单数据，最好的办法是引入 Elasticsearch 或者把历史数据迁移到 ClickHouse 里去做查询。MySQL 本来就不适合做海量数据的复杂检索，加不加索引意义都不大，直接上大数据组件才是根本解决办法。",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在方案 A 和方案 B 中做出选择，而是脱离题目设定自己提出了引入其他组件的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.82,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-01",
+    "question": "公司 Web 端业务管理系统面临企业客户日志数据量激增的问题，现有单表查询响应缓慢。若需在 MySQL 中设计一种既能支持快速定位特定时间范围数据，又能避免全表扫描的存储方案，你会选择：A. 建立基于时间戳的复合唯一索引并配合 Redis 缓存热点数据；B. 采用分块查找思想将数据按时间分块存储，构建包含块最大时间戳和起始地址的二级索引表。请选择一种方案并简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "针对日志数据量激增导致单表查询缓慢的问题，需要设计一种能快速定位时间范围且避免全表扫描的方案。我选择方案 B。方案 B 采用分块查找思想，将数据按时间分块并构建二级索引表。查询时，先在轻量级的二级索引表中快速定位到目标时间范围所在的数据块，然后再进入具体块内检索，这天然避免了全表扫描，极大提升了检索效率。而方案 A 存在明显缺陷：首先，日志的时间戳通常不是唯一的，建立“唯一索引”在业务语义上是错误的；其次，随着海量日志的持续写入，单表 B+ 树索引会变得极其庞大，维护成本极高；最后，Redis 缓存虽然能加速热点数据，但对于历史时间范围的日志排查毫无帮助。因此，方案 B 是从存储结构底层解决海量日志时间范围查询的最佳选择。",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：日志激增，单表查询慢，需按时间范围定位），A（选择方案 B），R（方案 B 通过二级索引定位数据块，避免全表扫描），E（深入分析了方案 A 的致命缺陷：时间戳不唯一、单表索引膨胀、Redis 无法解决历史查询，从而反证方案 B 的合理性）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.8,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-02",
+    "question": "公司 Web 端业务管理系统面临企业客户日志数据量激增的问题，现有单表查询响应缓慢。若需在 MySQL 中设计一种既能支持快速定位特定时间范围数据，又能避免全表扫描的存储方案，你会选择：A. 建立基于时间戳的复合唯一索引并配合 Redis 缓存热点数据；B. 采用分块查找思想将数据按时间分块存储，构建包含块最大时间戳和起始地址的二级索引表。请选择一种方案并简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "题目说现在日志数据量激增，单表查询很慢，需要一个能快速定位时间范围的方案。我选方案 B。因为方案 B 把数据按时间分块了，还建了二级索引表。这样我们在查某个时间段的日志时，就可以直接通过索引表找到那个块，不用去扫整张表，速度会快很多。方案 A 还要用 Redis，比较麻烦，所以选 B。",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 能通过索引表定位块，避免全表扫描），但缺少 E（没有指出方案 A 中“唯一索引”的语义错误，也没有分析单表索引膨胀的底层原因，对方案 A 的反驳仅仅停留在“比较麻烦”这种表层认知）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.76,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-03",
+    "question": "公司 Web 端业务管理系统面临企业客户日志数据量激增的问题，现有单表查询响应缓慢。若需在 MySQL 中设计一种既能支持快速定位特定时间范围数据，又能避免全表扫描的存储方案，你会选择：A. 建立基于时间戳的复合唯一索引并配合 Redis 缓存热点数据；B. 采用分块查找思想将数据按时间分块存储，构建包含块最大时间戳和起始地址的二级索引表。请选择一种方案并简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "公司目前的系统面临日志数据量激增、单表查询缓慢的问题，要求我们在 MySQL 中设计一个支持快速定位特定时间范围且避免全表扫描的存储方案。在方案 A 和方案 B 中，我会选择方案 B，也就是采用分块查找思想将数据按时间分块存储，构建包含块最大时间戳和起始地址的二级索引表。",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 B），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.5,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-04",
+    "question": "公司 Web 端业务管理系统面临企业客户日志数据量激增的问题，现有单表查询响应缓慢。若需在 MySQL 中设计一种既能支持快速定位特定时间范围数据，又能避免全表扫描的存储方案，你会选择：A. 建立基于时间戳的复合唯一索引并配合 Redis 缓存热点数据；B. 采用分块查找思想将数据按时间分块存储，构建包含块最大时间戳和起始地址的二级索引表。请选择一种方案并简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "系统现在日志数据量激增，单表查询响应缓慢，需要优化。我选方案 A。因为 Redis 是基于内存的，读写速度极快，把热点日志放进 Redis 里缓存起来，客户查询的时候直接走内存，肯定比方案 B 去查什么二级索引表要快得多。而且 MySQL 建索引是常规操作，复合唯一索引能保证数据不重复，所以方案 A 更好。",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 A），后续的理由完全忽视了日志时间戳不唯一的常识，也忽视了 Redis 无法解决海量历史日志查询的根本需求。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.65,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample3.md",
+    "case_id": "A-05",
+    "question": "公司 Web 端业务管理系统面临企业客户日志数据量激增的问题，现有单表查询响应缓慢。若需在 MySQL 中设计一种既能支持快速定位特定时间范围数据，又能避免全表扫描的存储方案，你会选择：A. 建立基于时间戳的复合唯一索引并配合 Redis 缓存热点数据；B. 采用分块查找思想将数据按时间分块存储，构建包含块最大时间戳和起始地址的二级索引表。请选择一种方案并简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "对于日志系统，最好的方案是直接接入 ELK (Elasticsearch, Logstash, Kibana) 技术栈。MySQL 根本就不适合存日志，不管怎么分块或者加索引，最后都会遇到性能瓶颈。用 Elasticsearch 做倒排索引，查询速度快，而且自带 Kibana 可以直接做可视化报表，这才是业界主流的做法。",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在题目给定的方案 A 和方案 B 中做出选择，而是脱离题目限制，直接提出了引入外部组件的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.71,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-01",
+    "question": "某企业级 Web 业务管理系统在处理海量日志检索时，发现单表查询响应缓慢。现有两种优化方案：A. 将数据按时间分块存储，建立索引表进行分块查找；B. 将所有数据加载到内存数组中利用顺序表特性进行二分查找。考虑到系统需支持持续迭代且数据量动态增长，你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "针对海量日志检索慢且数据量动态增长的问题，我选择方案 A。方案 A 将数据按时间分块并建立索引表，查询时先在轻量的索引表中定位目标块，再在块内检索，有效避免了全表扫描。这种方案数据落在磁盘上，只需追加新块和更新索引即可天然支持数据动态增长。而方案 B 试图将海量数据全部加载到内存中进行二分查找，这在理论上虽然查询极快（O(log N)），但在实际工程中是不可行的。因为服务器物理内存有限，面对动态增长的海量日志，内存迟早会溢出（OOM）；此外，内存数据在系统重启或崩溃时会全部丢失，无法满足企业级日志系统的持久化和高可用要求。因此，综合考虑可扩展性和系统稳定性，方案 A 是唯一合理的选择。",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：海量日志检索慢，数据动态增长），A（选择方案 A），R（方案 A 避免全表扫描，支持动态增长），E（深入分析了方案 B 的致命缺陷：物理内存有限导致 OOM、缺乏持久化，从而反证方案 A 的工程合理性）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.69,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-02",
+    "question": "某企业级 Web 业务管理系统在处理海量日志检索时，发现单表查询响应缓慢。现有两种优化方案：A. 将数据按时间分块存储，建立索引表进行分块查找；B. 将所有数据加载到内存数组中利用顺序表特性进行二分查找。考虑到系统需支持持续迭代且数据量动态增长，你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "现在的系统处理海量日志查询很慢，而且数据量还在不断增长。我选方案 A。因为方案 A 把数据按时间分块了，查询的时候通过索引表去找，速度会比全表扫描快很多。方案 B 把所有数据都放到内存里，虽然二分查找很快，但是海量日志数据量太大了，内存根本放不下，所以只能选方案 A，把数据存在硬盘里。",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 A），R（方案 A 避免全表扫描，方案 B 内存放不下），但缺少 E（没有进一步分析方案 A 追加写入的扩展性优势，也没有提及方案 B 缺乏持久化等更深层次的工程隐患，只是停留在“内存放不下”的表层判断）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.74,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-03",
+    "question": "某企业级 Web 业务管理系统在处理海量日志检索时，发现单表查询响应缓慢。现有两种优化方案：A. 将数据按时间分块存储，建立索引表进行分块查找；B. 将所有数据加载到内存数组中利用顺序表特性进行二分查找。考虑到系统需支持持续迭代且数据量动态增长，你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "目前系统在处理海量日志检索时单表查询响应缓慢，并且系统需要支持持续迭代和数据量的动态增长。在方案 A（按时间分块存储并建立索引表）和方案 B（加载到内存数组进行二分查找）中，我会选择方案 A。",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 A），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.78,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-04",
+    "question": "某企业级 Web 业务管理系统在处理海量日志检索时，发现单表查询响应缓慢。现有两种优化方案：A. 将数据按时间分块存储，建立索引表进行分块查找；B. 将所有数据加载到内存数组中利用顺序表特性进行二分查找。考虑到系统需支持持续迭代且数据量动态增长，你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "系统现在查海量日志很慢，需要优化。我会选择方案 B。因为题目说了要提升检索响应速度，二分查找的时间复杂度是 O(log N)，这是所有查找算法里最快的之一。方案 A 的分块查找还要去查索引表，然后再查数据块，中间有两次操作，肯定不如直接在内存里做二分查找快。至于内存问题，现在服务器内存都很便宜，直接加内存条就能解决数据量增长的问题。",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 B），后续的理由完全忽视了“海量数据动态增长”带来的无底洞般的内存成本，也缺乏对企业级系统持久化要求的认知。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.9,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample4.md",
+    "case_id": "A-05",
+    "question": "某企业级 Web 业务管理系统在处理海量日志检索时，发现单表查询响应缓慢。现有两种优化方案：A. 将数据按时间分块存储，建立索引表进行分块查找；B. 将所有数据加载到内存数组中利用顺序表特性进行二分查找。考虑到系统需支持持续迭代且数据量动态增长，你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 A",
+    "simulated_answer": "这两种方案都不太好。如果是海量日志，应该用 Hadoop 生态里的 HBase 来存，或者直接上 Elasticsearch。MySQL 和内存数组都不是用来做这种海量日志检索的。直接把日志异步写入到 ES 里，然后用 Kibana 来查，这才是标准的企业级解决方案。",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在题目给定的方案 A 和方案 B 中做出选择，而是脱离题目限制，直接提出了引入外部大数据组件的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.65,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-01",
+    "question": "某企业级业务管理系统在处理大量用户操作日志时，发现数据库写入成为瓶颈。为了提升系统响应速度，你需要在以下两种存储优化方案中进行二选一决策：A. 使用 MySQL 的 B+ 树索引对日志表进行全量排序并建立多级索引；B. 将实时高频写入的日志数据先存入 Redis List（基于链表实现的队列），再异步批量同步至 MySQL。你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "针对大量用户操作日志导致数据库写入成为瓶颈的问题，我选择方案 B。核心矛盾是高频写入压力，而方案 A 建立多级索引不仅无法缓解写入瓶颈，反而因为每次写入都需要维护 B+ 树结构（如页分裂等），会进一步拖慢写入速度。方案 B 引入 Redis List 作为消息队列进行削峰填谷，Redis 基于内存操作，写入性能极高，能迅速响应前端请求；随后通过异步线程将数据批量同步至 MySQL，将大量零散的单条 INSERT 转换为批量写入，大幅降低了数据库的连接开销和磁盘 I/O 频率。这种架构既提升了系统的整体响应速度，又保护了底层关系型数据库不被高并发写垮。",
+    "ground_truth": {
+      "stare_level": "STARE",
+      "score": 3,
+      "notes": "完美的标准答案。包含了 S/T（转述问题：大量日志导致数据库写入瓶颈），A（选择方案 B），R（方案 B 利用 Redis 缓冲并异步批量写入 MySQL），E（深入分析了方案 A 的反作用（维护索引拖慢写入），并解释了方案 B 为什么有效（内存操作削峰、批量插入减少 I/O））。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.56,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-02",
+    "question": "某企业级业务管理系统在处理大量用户操作日志时，发现数据库写入成为瓶颈。为了提升系统响应速度，你需要在以下两种存储优化方案中进行二选一决策：A. 使用 MySQL 的 B+ 树索引对日志表进行全量排序并建立多级索引；B. 将实时高频写入的日志数据先存入 Redis List（基于链表实现的队列），再异步批量同步至 MySQL。你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "现在的系统在处理大量用户日志时，数据库写入太慢了。为了提升响应速度，我选方案 B。因为 Redis 是内存数据库，速度比 MySQL 快很多，先把日志写到 Redis 的 List 里，系统就能马上返回成功，用户体验会好很多。然后再慢慢把数据同步到 MySQL 里存起来。方案 A 还要建索引，建索引一般是用来优化查询的，对提升写入速度没什么帮助，所以选 B。",
+    "ground_truth": {
+      "stare_level": "STAR",
+      "score": 2,
+      "notes": "知其然不知其所以然型答案。包含了 S/T（转述问题），A（选择方案 B），R（方案 B 用 Redis 提速并异步同步，方案 A 优化的是查询），但缺少 E（没有深入分析批量同步对降低 MySQL 磁盘 I/O 的核心作用，也没有指出维护 B+ 树索引对写入性能的实质性损害，只停留在“Redis 比 MySQL 快”的表面）。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.59,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-03",
+    "question": "某企业级业务管理系统在处理大量用户操作日志时，发现数据库写入成为瓶颈。为了提升系统响应速度，你需要在以下两种存储优化方案中进行二选一决策：A. 使用 MySQL 的 B+ 树索引对日志表进行全量排序并建立多级索引；B. 将实时高频写入的日志数据先存入 Redis List（基于链表实现的队列），再异步批量同步至 MySQL。你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "目前系统面临的问题是大量用户操作日志导致数据库写入成为瓶颈，需要提升系统响应速度。在方案 A（使用 MySQL B+ 树建立多级索引）和方案 B（先存入 Redis List 再异步批量同步至 MySQL）中，我会选择方案 B。",
+    "ground_truth": {
+      "stare_level": "STA",
+      "score": 1,
+      "notes": "有根据的猜测型答案。包含了 S/T（完整转述了问题和背景），A（明确选择了方案 B），但是没有任何理由（缺少 R 和 E），属于猜对答案的情况。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.5,
+      "level_match": false,
+      "score_match": false
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-04",
+    "question": "某企业级业务管理系统在处理大量用户操作日志时，发现数据库写入成为瓶颈。为了提升系统响应速度，你需要在以下两种存储优化方案中进行二选一决策：A. 使用 MySQL 的 B+ 树索引对日志表进行全量排序并建立多级索引；B. 将实时高频写入的日志数据先存入 Redis List（基于链表实现的队列），再异步批量同步至 MySQL。你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "系统现在写入日志太慢了，成了瓶颈。我选方案 A。因为 MySQL 的 B+ 树是非常高效的数据结构，建立多级索引之后，数据库就能更快地找到数据应该插入的位置，从而提升写入速度。方案 B 引入了 Redis，多了一个中间件就多了一分风险，如果 Redis 宕机了日志就全丢了，这在企业级系统里是不能接受的。",
+    "ground_truth": {
+      "stare_level": "ST/Others",
+      "score": 0,
+      "notes": "只能转述问题，选错方案。包含了 S/T（转述了问题），但是 A 选错了（选择了方案 A），后续的理由完全违背了数据库基本原理（建立索引会降低写入性能而不是提升），对方案 B 的反驳也过于片面。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.64,
+      "level_match": false,
+      "score_match": true
+    }
+  },
+  {
+    "file_name": "FullStack_Sample5.md",
+    "case_id": "A-05",
+    "question": "某企业级业务管理系统在处理大量用户操作日志时，发现数据库写入成为瓶颈。为了提升系统响应速度，你需要在以下两种存储优化方案中进行二选一决策：A. 使用 MySQL 的 B+ 树索引对日志表进行全量排序并建立多级索引；B. 将实时高频写入的日志数据先存入 Redis List（基于链表实现的队列），再异步批量同步至 MySQL。你会选择哪种方案？请简述理由。",
+    "correct_answer": "方案 B",
+    "simulated_answer": "我觉得这两个方案都不行。日志数据根本就不应该存到 MySQL 里。最好的办法是直接在前端埋点，用神策或者 GrowingIO 这样的第三方日志分析平台。把日志直接发给第三方，我们自己的后端系统就完全没有写入压力了，这才是最彻底的解决办法。",
+    "ground_truth": {
+      "stare_level": "Others",
+      "score": 0,
+      "notes": "完全答非所问。没有转述题目中的具体问题，也没有在题目给定的方案 A 和方案 B 中做出选择，而是脱离题目限制，直接提出了使用第三方 SaaS 服务的方案。"
+    },
+    "single": {
+      "stare_level": "Error",
+      "score": 0,
+      "reasoning": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}",
+      "components": {},
+      "elapsed_seconds": 1.79,
+      "level_match": false,
+      "score_match": true
+    }
+  }
+]
